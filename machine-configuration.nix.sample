@@ -5,17 +5,17 @@
 {
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
-  networking.hostName = "themountain"; # Define your hostname.
-  networking.hostId = "9034fa70";
+  networking.hostName = "CHANGEME"; # Define your hostname.
+  networking.hostId = "CHANGEME";
 
   # Mount the root volume
   boot.initrd.luks.devices = [
-    { name = "luksroot"; device = "/dev/disk/by-uuid/de9b66f7-f1d8-4df6-ba80-902000670623"; }
+    { name = "luksroot"; device = "/dev/disk/by-uuid/CHANGEME"; }
   ];
 
   # Get the encrypted swap mounted
   boot.initrd.postMountCommands = 
-    "cryptsetup luksOpen --key-file /mnt-root/root/keyfile /dev/disk/by-uuid/e10441e9-58ff-494c-bf69-ed8066addd93 swap";
+    "cryptsetup luksOpen --key-file /mnt-root/root/keyfile /dev/disk/by-uuid/CHANGEME swap";
   swapDevices = [
     { device = "/dev/mapper/swap"; }
   ];
