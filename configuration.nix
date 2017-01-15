@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       # Include machine-specific config
       ./machine-configuration.nix
-      ./pkgs/droid-slashed
+      ./pkgs/droid-slashed/default.nix
     ];
 
   boot.loader.grub.enable = true;
