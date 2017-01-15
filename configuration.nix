@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       # Include machine-specific config
       ./machine-configuration.nix
+      ./pkgs/droid-slashed
     ];
 
   boot.loader.grub.enable = true;
@@ -44,6 +45,7 @@
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       font-droid
+      font-droid-sans-mono-slashed
       emojione
       noto-fonts
     ];
