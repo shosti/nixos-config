@@ -76,6 +76,7 @@
       '';
     };
   };
+  services.tlp.enable = true;
 
   users.extraUsers.shosti = {
     isNormalUser = true;
