@@ -16,6 +16,8 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
   boot.supportedFilesystems = [ "zfs" ];
+  boot.tmpOnTmpfs = true;
+
 
   networking.networkmanager.enable = true;
 
