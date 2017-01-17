@@ -41,7 +41,6 @@
     gnupg
     silver-searcher
     syncthing
-    ruby
     rxvt_unicode-with-plugins
     xsel
   ];
