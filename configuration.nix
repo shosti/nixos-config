@@ -18,6 +18,10 @@
   boot.supportedFilesystems = [ "zfs" ];
   boot.tmpOnTmpfs = true;
 
+  boot.zfs = {
+    forceImportAll = false;
+    forceImportRoot = false;
+  };
 
   networking.networkmanager.enable = true;
 
