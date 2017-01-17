@@ -91,6 +91,14 @@
     dataDir = "/home/shosti/.syncthing";
   };
 
+  services.postgresql = {
+    enable = true;
+  };
+
+  services.redis = {
+    enable = true;
+  };
+
   services.emacs = {
     enable = true;
     package = pkgs.emacs25;
