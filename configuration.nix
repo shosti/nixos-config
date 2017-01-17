@@ -105,6 +105,11 @@
     defaultEditor = true;
   };
 
+  services.zfs.autoSnapshot = {
+    enable = true;
+    flags = "-k -p --utc";
+  };
+
   security.sudo.wheelNeedsPassword = false;
 
   # The NixOS release to be compatible with for stateful data such as databases.
