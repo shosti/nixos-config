@@ -37,6 +37,7 @@
     chromium
     git
     emacs25
+    pinentry
     gnupg
     silver-searcher
     syncthing
