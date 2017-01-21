@@ -79,6 +79,7 @@
     };
   };
   services.tlp.enable = true;
+  services.timesyncd.enable = true;
 
   users.extraUsers.shosti = {
     isNormalUser = true;
