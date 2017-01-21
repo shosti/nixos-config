@@ -52,7 +52,6 @@
     fonts = with pkgs; [
       font-droid
       (import ./pkgs/droid-slashed.nix)
-      emojione
       noto-fonts
       noto-fonts-emoji
       symbola
