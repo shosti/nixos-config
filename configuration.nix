@@ -32,6 +32,7 @@
     wget
     acpi
     htop
+    direnv
     vim
     dmenu
     chromium
