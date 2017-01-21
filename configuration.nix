@@ -44,6 +44,8 @@
     syncthing
     rxvt_unicode-with-plugins
     xsel
+    aspell
+    aspellDicts.en
   ];
 
   fonts = {
