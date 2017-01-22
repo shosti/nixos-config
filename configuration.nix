@@ -83,6 +83,11 @@
   services.tlp.enable = true;
   services.timesyncd.enable = true;
 
+  hardware.trackpoint = {
+    enable = true;
+    emulateWheel = true;
+  };
+
   users.extraUsers.shosti = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
