@@ -124,6 +124,8 @@
     flags = "-k -p --utc";
   };
 
+  services.upower.enable = true;
+
   security.sudo.wheelNeedsPassword = false;
 
   # The NixOS release to be compatible with for stateful data such as databases.
