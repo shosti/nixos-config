@@ -46,6 +46,7 @@
     xsel
     aspell
     aspellDicts.en
+    usbutils
   ];
 
   fonts = {
