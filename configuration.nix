@@ -49,6 +49,7 @@
     usbutils
     hfsprogs
     xautolock
+    xmodmap
   ];
 
   fonts = {
