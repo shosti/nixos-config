@@ -124,6 +124,11 @@
     flags = "-k -p --utc";
   };
 
+  services.physlock = {
+    enable = true;
+    user = "shosti";
+  };
+
   services.upower.enable = true;
 
   security.sudo.wheelNeedsPassword = false;
