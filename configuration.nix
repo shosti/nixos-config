@@ -48,6 +48,7 @@
     aspellDicts.en
     usbutils
     hfsprogs
+    xautolock
   ];
 
   fonts = {
