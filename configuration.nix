@@ -47,6 +47,7 @@
     aspell
     aspellDicts.en
     usbutils
+    hfsprogs
   ];
 
   fonts = {
