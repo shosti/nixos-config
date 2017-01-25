@@ -50,6 +50,7 @@
     hfsprogs
     xautolock
     xorg.xmodmap
+    tree
   ];
 
   fonts = {
