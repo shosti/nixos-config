@@ -98,6 +98,8 @@
     home = "/home/shosti";
   };
 
+  virtualisation.virtualbox.host.enable = true;
+
   services.syncthing = {
     user = "shosti";
     enable = true;
