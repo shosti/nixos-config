@@ -54,6 +54,7 @@
     pass
     pwgen
     isync
+    msmtp
   ];
 
   fonts = {
