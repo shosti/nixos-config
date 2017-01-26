@@ -55,7 +55,6 @@
     pwgen
     isync
     msmtp
-    cron
   ];
 
   fonts = {
@@ -146,6 +145,8 @@
   environment.etc."dovecot/passwd".source = "/etc/nixos/config/passwd";
 
   services.upower.enable = true;
+
+  services.cron.enable = true;
 
   security.sudo.wheelNeedsPassword = false;
 
