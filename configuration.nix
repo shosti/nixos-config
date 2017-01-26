@@ -55,6 +55,7 @@
     pwgen
     isync
     msmtp
+    cron
   ];
 
   fonts = {
