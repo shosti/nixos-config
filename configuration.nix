@@ -134,11 +134,11 @@
 
   services.dovecot2 = {
     enable = true;
-    configFile = "./config/dovecot.conf";
+    configFile = "/etc/nixos/config/dovecot.conf";
   };
 
   # passdb file for dovecot
-  environment.etc."dovecot/passwd".conf = "./config/passwd";
+  environment.etc."dovecot/passwd".source = "/etc/nixos/config/passwd";
 
   services.upower.enable = true;
 
