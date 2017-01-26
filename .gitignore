@@ -1,3 +1,4 @@
 .tramp_history
 hardware-configuration.nix
 /machine-configuration.nix
+/config/passwd

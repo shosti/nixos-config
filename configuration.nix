@@ -132,6 +132,14 @@
     user = "shosti";
   };
 
+  services.dovecot2 = {
+    enable = true;
+    configFile = "./config/dovecot.conf";
+  };
+
+  # passdb file for dovecot
+  environment.etc."dovecot/passwd".conf = "./config/passwd";
+
   services.upower.enable = true;
 
   security.sudo.wheelNeedsPassword = false;
