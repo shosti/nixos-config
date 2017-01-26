@@ -51,6 +51,8 @@
     xautolock
     xorg.xmodmap
     tree
+    pass
+    pwgen
   ];
 
   fonts = {
