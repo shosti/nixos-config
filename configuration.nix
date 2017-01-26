@@ -53,7 +53,7 @@
     tree
     pass
     pwgen
-    mbsync
+    isync
   ];
 
   fonts = {
