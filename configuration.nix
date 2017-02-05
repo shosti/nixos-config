@@ -149,6 +149,9 @@
   services.cron.enable = true;
 
   security.sudo.wheelNeedsPassword = false;
+  security.pam.services = [
+    { name = "login"; startSession = true; }
+  ];
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "16.09";
