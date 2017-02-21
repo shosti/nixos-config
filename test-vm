@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -eou pipefail
+
+export NIXOS_CONFIG="$(pwd)/configuration.nix"
+nixos-rebuild build-vm
+echo "Connect with 'ssh -p 2222 localhost'"
+QEMU_NET_OPTS="hostfwd=tcp::2222-:22" ./result/bin/run-*-vm
