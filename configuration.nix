@@ -125,7 +125,10 @@
 
   services.redis = {
     enable = true;
+    bind = "127.43.224.42";
   };
+
+  environment.variables.REDIS_HOST = "127.43.224.42";
 
   services.emacs = {
     enable = true;
