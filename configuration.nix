@@ -56,6 +56,7 @@
     isync
     msmtp
     psmisc
+    hwloc
   ];
 
   fonts = {
