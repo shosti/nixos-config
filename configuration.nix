@@ -121,6 +121,7 @@
 
   services.postgresql = {
     enable = true;
+    package = pkgs.postgresql96;
   };
 
   services.redis = {
