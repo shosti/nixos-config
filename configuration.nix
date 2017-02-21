@@ -58,6 +58,7 @@
     psmisc
     hwloc
     blktrace
+    sysstat
   ];
 
   fonts = {
