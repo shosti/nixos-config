@@ -119,10 +119,10 @@
     dataDir = "/home/shosti/.syncthing";
   };
 
-  services.postgresql = {
-    enable = true;
-    package = pkgs.postgresql96;
-  };
+  # services.postgresql = {
+  #   enable = true;
+  #   package = pkgs.postgresql96;
+  # };
 
   services.redis = {
     enable = true;
