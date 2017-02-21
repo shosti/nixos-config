@@ -60,6 +60,7 @@
     blktrace
     sysstat
     postgresql96 # for psql
+    redis # for redis-cli
   ];
 
   fonts = {
@@ -134,9 +135,14 @@
     };
   };
 
-  services.redis = {
-    enable = true;
-    bind = "127.43.224.42";
+  containers.redis = {
+    autoStart = true;
+    config = { config, pkgs, ... }: {
+      services.redis = {
+        enable = true;
+        bind = "127.43.224.42";
+      };
+    };
   };
 
   environment.variables.REDIS_HOST = "127.43.224.42";
