@@ -57,6 +57,7 @@
     msmtp
     psmisc
     hwloc
+    blktrace
   ];
 
   fonts = {
