@@ -59,6 +59,7 @@
     hwloc
     blktrace
     sysstat
+    postgresql96 # for psql
   ];
 
   fonts = {
@@ -119,9 +120,17 @@
     dataDir = "/home/shosti/.syncthing";
   };
 
-  services.postgresql = {
-    enable = true;
-    package = pkgs.postgresql96;
+  containers.postgres = {
+    autoStart = true;
+    config = { config, pkgs, ... }: {
+      services.postgresql = {
+        enable = true;
+        package = pkgs.postgresql96;
+        authentication = pkgs.lib.mkForce ''
+          host all all 127.0.0.1/32 trust
+        '';
+      };
+    };
   };
 
   services.redis = {
