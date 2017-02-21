@@ -127,6 +127,7 @@
         enable = true;
         package = pkgs.postgresql96;
         authentication = pkgs.lib.mkForce ''
+          local all all trust
           host all all 127.0.0.1/32 trust
         '';
       };
