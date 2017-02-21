@@ -101,10 +101,9 @@
     emulateWheel = true;
   };
 
-  users.extraUsers.shosti = {
+  users.users.shosti = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-    home = "/home/shosti";
   };
 
   virtualisation.virtualbox.host.enable = true;
