@@ -55,6 +55,7 @@
     pwgen
     isync
     msmtp
+    slock
     psmisc
     hwloc
     blktrace
@@ -156,10 +157,6 @@
   services.zfs.autoSnapshot = {
     enable = true;
     flags = "-k -p --utc";
-  };
-
-  services.physlock = {
-    enable = true;
   };
 
   services.dovecot2 = {
