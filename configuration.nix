@@ -160,7 +160,6 @@
 
   services.physlock = {
     enable = true;
-    user = "shosti";
   };
 
   services.dovecot2 = {
