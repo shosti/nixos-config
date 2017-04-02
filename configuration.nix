@@ -186,6 +186,7 @@
     before = [ "systemd-suspend.service" "systemd-hibernate.target" ];
     serviceConfig.Type = "forking";
     script = "${pkgs.i3lock}/bin/i3lock";
+    environment = { DISPLAY = ":0"; };
   };
 
   # The NixOS release to be compatible with for stateful data such as databases.
