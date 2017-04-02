@@ -180,7 +180,6 @@
   };
 
   security.sudo.wheelNeedsPassword = false;
-  security.grsecurity.enable = true;
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "17.03";
