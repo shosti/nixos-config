@@ -177,6 +177,7 @@
   };
 
   security.sudo.wheelNeedsPassword = false;
+  security.setuidPrograms = [ "slock" ];
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "17.03";
