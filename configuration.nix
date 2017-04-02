@@ -178,6 +178,16 @@
 
   security.sudo.wheelNeedsPassword = false;
 
+  # Make sure screen is locked on suspend
+  systemd.services."i3lock" = {
+    enable = true;
+    description = "i3lock";
+    wantedBy = [ "suspend.target" "hibernate.target" ];
+    before = [ "systemd-suspend.service" "systemd-hibernate.target" ];
+    serviceConfig.Type = "forking";
+    script = "${pkgs.i3lock}/bin/i3lock";
+  };
+
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "17.03";
 }
