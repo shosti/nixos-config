@@ -184,8 +184,12 @@
     description = "i3lock";
     wantedBy = [ "suspend.target" "hibernate.target" ];
     before = [ "systemd-suspend.service" "systemd-hibernate.target" ];
-    serviceConfig.Type = "forking";
+    serviceConfig = {
+      Type = "forking";
+      User = "shosti"; # unfortunately necessary :(
+    };
     script = "${pkgs.i3lock}/bin/i3lock";
+    postStart = "${pkgs.coreutils}/bin/sleep 1";
     environment = { DISPLAY = ":0"; };
   };
 
