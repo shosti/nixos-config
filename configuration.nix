@@ -60,6 +60,7 @@
     hwloc
     blktrace
     sysstat
+    stow
     postgresql96 # for psql
     redis # for redis-cli
   ];
