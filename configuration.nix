@@ -61,6 +61,8 @@
     blktrace
     sysstat
     stow
+    lsof
+    lshw
     postgresql96 # for psql
     redis # for redis-cli
   ];
