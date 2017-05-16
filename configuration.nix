@@ -35,6 +35,7 @@
     direnv
     vim
     dmenu
+    gtk2-x11
     chromium
     git
     emacs25
