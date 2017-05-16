@@ -53,6 +53,7 @@
     xorg.xmodmap
     tree
     pass
+    keepasshttp
     pwgen
     isync
     msmtp
