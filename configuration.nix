@@ -53,6 +53,7 @@
     xorg.xmodmap
     tree
     pass
+    keepass
     keepass-keepasshttp
     pwgen
     isync
