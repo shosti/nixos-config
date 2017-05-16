@@ -51,6 +51,7 @@
     xautolock
     xorg.xbacklight
     xorg.xmodmap
+    xbindkeys
     tree
     pass
     (keepass.override { plugins = [ keepass-keepasshttp ]; })
