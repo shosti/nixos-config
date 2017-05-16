@@ -49,6 +49,7 @@
     usbutils
     hfsprogs
     xautolock
+    xorg.xbacklight
     xorg.xmodmap
     tree
     pass
