@@ -39,7 +39,7 @@
     git
     emacs25
     pinentry
-    (gnupg.override { pinentry = pinentry; guiSupport = true; })
+    gnupg
     silver-searcher
     syncthing
     rxvt_unicode-with-plugins
