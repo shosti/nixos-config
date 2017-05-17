@@ -36,6 +36,7 @@
     vim
     dmenu
     chromium
+    gnome.gtk2 # add explicitly so that things get linked
     git
     emacs25
     pinentry
