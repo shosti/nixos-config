@@ -54,6 +54,7 @@
     xorg.xmodmap
     xbindkeys
     tree
+    jq
     pass
     (keepass.override { plugins = [ keepass-keepasshttp ]; })
     pwgen
