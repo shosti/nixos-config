@@ -202,6 +202,40 @@
     environment = { DISPLAY = ":0"; };
   };
 
+  # Some ngnix stuff for work...
+  networking.extraHosts = ''
+    127.0.0.1 rainforest.dev
+  '';
+
+  services.nginx.virtualHosts = {
+    "app.rainforest.dev" = {
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:8002";
+      };
+    };
+
+    "admin.rainforest.dev" = {
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:8002";
+      };
+    };
+
+    "portal.rainforest.dev" = {
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:8002";
+      };
+    };
+
+    "automation.rainforest.dev" = {
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:8002";
+      };
+    };
+  };
+
+  services.nginx.recommendedProxySettings = true;
+  services.nginx.enable = true;
+
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "17.03";
 }
