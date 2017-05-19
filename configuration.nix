@@ -204,7 +204,10 @@
 
   # Some ngnix stuff for work...
   networking.extraHosts = ''
-    127.0.0.1 rainforest.dev
+    127.0.0.1 app.rainforest.dev
+    127.0.0.1 admin.rainforest.dev
+    127.0.0.1 portal.rainforest.dev
+    127.0.0.1 automation.rainforest.dev
   '';
 
   services.nginx.virtualHosts = {
