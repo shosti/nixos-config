@@ -3,20 +3,19 @@
 { config, pkgs, ... }:
 
 {
-  boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
-
   networking.hostName = "CHANGEME"; # Define your hostname.
   networking.hostId = "CHANGEME";
 
   # Mount the root volume
   boot.initrd.luks.devices = [
-    { name = "luksroot"; device = "/dev/disk/by-uuid/CHANGEME"; }
+    { name = "root"; device = "/dev/disk/by-uuid/CHANGEME"; }
   ];
 
+  # Disable hibernate resume, since it doesn't work and slows down the boot
+  # process
+  boot.resumeDevice = "/dev/null";
+
   # Get the encrypted swap mounted
-  boot.initrd.postMountCommands = 
-    "cryptsetup luksOpen --key-file /mnt-root/root/keyfile /dev/disk/by-uuid/CHANGEME swap";
-  swapDevices = [
-    { device = "/dev/mapper/swap"; }
-  ];
+  boot.initrd.postMountCommands =
+    "cryptsetup luksOpen --key-file /mnt-root/swapkeyfile /dev/disk/by-uuid/CHANGEME swap";
 }
