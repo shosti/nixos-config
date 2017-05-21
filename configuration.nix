@@ -107,7 +107,11 @@
   };
   services.tlp.enable = true;
   services.timesyncd.enable = true;
-  services.redshift.enable = true;
+  services.redshift = {
+    enable = true;
+    latitude = "37.7618";
+    longitude = "-122.4856";
+  };
 
   hardware.trackpoint = {
     enable = true;
