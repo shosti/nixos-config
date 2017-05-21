@@ -107,6 +107,7 @@
   };
   services.tlp.enable = true;
   services.timesyncd.enable = true;
+  services.redshift.enable = true;
 
   hardware.trackpoint = {
     enable = true;
