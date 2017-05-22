@@ -183,6 +183,7 @@
 
   services.upower.enable = true;
 
+  services.printing.enable = true;
   services.cron.enable = true;
   services.openssh = {
     enable = true;
