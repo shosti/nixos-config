@@ -183,7 +183,10 @@
 
   services.upower.enable = true;
 
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = [ pkgs.brgenml1cupswrapper ];
+  };
   services.cron.enable = true;
   services.openssh = {
     enable = true;
