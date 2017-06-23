@@ -52,6 +52,7 @@
     xautolock
     xorg.xbacklight
     xorg.xmodmap
+    xorg.xev
     xbindkeys
     tree
     jq
@@ -71,6 +72,11 @@
     zathura
     postgresql96 # for psql
     redis # for redis-cli
+    unzip
+    traceroute
+    pv
+    sl
+    cowsay
   ];
 
   fonts = {
