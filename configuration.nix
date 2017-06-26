@@ -77,6 +77,10 @@
     pv
     sl
     cowsay
+    iotop
+    nethogs
+    powertop
+    espeak
   ];
 
   fonts = {
