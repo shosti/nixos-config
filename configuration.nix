@@ -82,6 +82,7 @@
     powertop
     espeak
     ethtool
+    rfkill
   ];
 
   fonts = {
