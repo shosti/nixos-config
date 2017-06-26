@@ -124,6 +124,7 @@
     longitude = "-122.4856";
   };
 
+  hardware.bluetooth.enable = false;
   hardware.trackpoint = {
     enable = true;
     emulateWheel = true;
