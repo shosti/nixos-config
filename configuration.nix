@@ -81,6 +81,7 @@
     nethogs
     powertop
     espeak
+    ethtool
   ];
 
   fonts = {
