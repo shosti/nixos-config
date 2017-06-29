@@ -83,6 +83,7 @@
     espeak
     ethtool
     rfkill
+    telnet
   ];
 
   fonts = {
