@@ -84,6 +84,7 @@
     ethtool
     rfkill
     telnet
+    hdparm
   ];
 
   fonts = {
