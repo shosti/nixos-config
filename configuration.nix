@@ -85,6 +85,7 @@
     rfkill
     telnet
     hdparm
+    p7zip
   ];
 
   nix.gc = {
