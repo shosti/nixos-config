@@ -86,6 +86,9 @@
     telnet
     hdparm
     p7zip
+    ghostscript
+    imagemagick7
+    maim
   ];
 
   nix.gc = {
