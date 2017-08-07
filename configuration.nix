@@ -27,68 +27,68 @@
   time.timeZone = "America/Los_Angeles";
 
   environment.systemPackages = with pkgs; [
-    vlc
-    ffmpeg
-    wget
+    (keepass.override { plugins = [ keepass-keepasshttp ]; })
     acpi
-    htop
-    direnv
-    vim
-    dmenu
-    chromium
-    gnome2.gtk # add explicitly so that things get linked
-    git
-    emacs25
-    pinentry
-    gnupg
-    silver-searcher
-    syncthing
-    rxvt_unicode-with-plugins
-    xsel
     aspell
     aspellDicts.en
-    usbutils
-    hfsprogs
-    xautolock
-    xorg.xbacklight
-    xorg.xmodmap
-    xorg.xev
-    xbindkeys
-    tree
-    jq
-    pass
-    (keepass.override { plugins = [ keepass-keepasshttp ]; })
-    pwgen
-    isync
-    msmtp
-    i3lock
-    psmisc
-    hwloc
     blktrace
-    sysstat
-    stow
-    lsof
-    lshw
-    zathura
-    postgresql96 # for psql
-    redis # for redis-cli
-    unzip
-    traceroute
-    pv
-    sl
+    chromium
     cowsay
-    iotop
-    nethogs
-    powertop
+    direnv
+    dmenu
+    emacs25
     espeak
     ethtool
-    rfkill
-    telnet
-    hdparm
-    p7zip
+    ffmpeg
     ghostscript
+    git
+    gnome2.gtk # add explicitly so that things get linked
+    gnupg
+    hdparm
+    hfsprogs
+    htop
+    hwloc
+    i3lock
     imagemagick7
+    iotop
+    isync
+    jq
+    lshw
+    lsof
     maim
+    msmtp
+    nethogs
+    p7zip
+    pass
+    pinentry
+    postgresql96 # for psql
+    powertop
+    psmisc
+    pv
+    pwgen
+    redis # for redis-cli
+    rfkill
+    rxvt_unicode-with-plugins
+    silver-searcher
+    sl
+    stow
+    syncthing
+    sysstat
+    telnet
+    traceroute
+    tree
+    unzip
+    usbutils
+    vim
+    vlc
+    wget
+    xautolock
+    xbindkeys
+    xorg.xbacklight
+    xorg.xev
+    xorg.xmodmap
+    xsel
+    zathura
   ];
 
   nix.gc = {
