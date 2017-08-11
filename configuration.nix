@@ -135,6 +135,7 @@
     '';
   };
   services.timesyncd.enable = true;
+  services.locate.enable = true;
   services.redshift = {
     enable = true;
     latitude = "37.7618";
