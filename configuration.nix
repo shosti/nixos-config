@@ -60,7 +60,6 @@
     nethogs
     p7zip
     pass
-    perl # needed for some "global" scripts
     pinentry
     postgresql96 # for psql
     powertop
