@@ -54,7 +54,6 @@
     iotop
     isync
     jq
-    libu2f-host
     lshw
     lsof
     maim
@@ -227,7 +226,6 @@
   };
 
   security.sudo.wheelNeedsPassword = false;
-  security.pam.enableU2F = true;
 
   # Make sure screen is locked on suspend
   systemd.services."i3lock" = {
@@ -243,6 +241,17 @@
     postStart = "${pkgs.coreutils}/bin/sleep 1";
     environment = { DISPLAY = ":0"; };
   };
+
+  # Some annoying hacks that are necessary for yubikey u2f to work
+  services.udev.extraRules = ''
+    # this udev file should be used with udev 188 and newer
+    ACTION!="add|change", GOTO="u2f_end"
+
+    # Yubico YubiKey
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1050", ATTRS{idProduct}=="0113|0114|0115|0116|0120|0200|0402|0403|0406|0407|0410", TAG+="uaccess"
+
+    LABEL="u2f_end"
+  ''
 
   # Some ngnix stuff for work...
   networking.extraHosts = ''
