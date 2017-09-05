@@ -62,6 +62,7 @@
     nethogs
     p7zip
     pass
+    pcsctools
     pinentry
     postgresql96 # for psql
     powertop
