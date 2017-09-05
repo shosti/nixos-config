@@ -226,6 +226,7 @@
   };
 
   security.sudo.wheelNeedsPassword = false;
+  security.pam.enableU2F = true;
 
   # Make sure screen is locked on suspend
   systemd.services."i3lock" = {
