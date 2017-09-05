@@ -54,6 +54,7 @@
     iotop
     isync
     jq
+    libu2f-host
     lshw
     lsof
     maim
