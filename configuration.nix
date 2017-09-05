@@ -62,7 +62,6 @@
     nethogs
     p7zip
     pass
-    pcsctools
     pinentry
     postgresql96 # for psql
     powertop
@@ -243,6 +242,8 @@
     postStart = "${pkgs.coreutils}/bin/sleep 1";
     environment = { DISPLAY = ":0"; };
   };
+
+  services.pcscd.enable = true;
 
   # Some annoying hacks that are necessary for yubikey u2f to work
   services.udev.extraRules = ''
