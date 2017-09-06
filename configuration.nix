@@ -151,6 +151,8 @@
     emulateWheel = true;
   };
 
+  users.groups = { u2f = {}; };
+
   users.users.shosti = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "u2f" ];
