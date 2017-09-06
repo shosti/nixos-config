@@ -153,7 +153,7 @@
 
   users.users.shosti = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "u2f" ];
     # Useful for testing
     openssh.authorizedKeys.keys = [
       "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoE5MAy3Sjt3taf14lJyh6T/qe21I/VzYqgcuiaDacLTa5cRyT/+qt6wtTb3UsD6I7zTtHuzr1klshSB/5vHP7LcZkr0P398ArOFV7MSv/sR2ZPX+9bbzL5Rlewqly4Ft+COdkGeWAWk32EeXyqGbLZVWUqSagatSa2YCWuT5FAFalbVg27nlbsXhVOTi0vDd2E33shJuVwOjq+HNA48ZMZXohLaTkxB+3dWZ1XfMcuyjkS/epHUvQeBGXff/Ox8EdIVXcfDtWL41N6GgkA0v+LAiGC84bxqOuGS97t3FMGUHodVIUSLZwblhT2M4P1h7IQa0N//QmSmwabO3newZZ shosti@themountain"
@@ -251,7 +251,7 @@
     ACTION!="add|change", GOTO="u2f_end"
 
     # Yubico YubiKey
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1050", ATTRS{idProduct}=="0113|0114|0115|0116|0120|0200|0402|0403|0406|0407|0410", MODE="0660"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1050", ATTRS{idProduct}=="0113|0114|0115|0116|0120|0200|0402|0403|0406|0407|0410", GROUP="u2f"
 
     LABEL="u2f_end"
   '';
