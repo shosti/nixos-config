@@ -60,6 +60,7 @@
     maim
     msmtp
     nethogs
+    openssl
     p7zip
     pass
     pcsctools
@@ -74,6 +75,7 @@
     rxvt_unicode-with-plugins
     silver-searcher
     sl
+    slop
     stow
     syncthing
     sysstat
@@ -85,6 +87,10 @@
     vim
     vlc
     wget
+    whois
+    ykpers
+    yubikey-neo-manager
+    yubioath-desktop
     xautolock
     xbindkeys
     xorg.xbacklight
