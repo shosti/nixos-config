@@ -118,6 +118,7 @@
   };
 
   programs.bash.enableCompletion = true;
+  programs.ssh.startAgent = false; # Use gpg instead
 
   services.xserver = {
     enable = true;
