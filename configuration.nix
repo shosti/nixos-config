@@ -39,6 +39,7 @@
     emacs25
     espeak
     ethtool
+    exfat
     ffmpeg
     ghostscript
     git
