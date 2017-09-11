@@ -255,7 +255,7 @@
     environment = { DISPLAY = ":0"; };
   };
 
-  services.pcscd.enable = false;
+  services.pcscd.enable = true;
 
   # Fix yubikey permissions
   services.udev.extraRules = ''
