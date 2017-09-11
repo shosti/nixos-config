@@ -64,6 +64,7 @@
     openssl
     p7zip
     pass
+    pcsclite
     pcsctools
     pinentry
     postgresql96 # for psql
