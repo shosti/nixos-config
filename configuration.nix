@@ -64,7 +64,6 @@
     openssl
     p7zip
     pass
-    pcsclite
     pcsctools
     pinentry
     postgresql96 # for psql
@@ -256,7 +255,7 @@
     environment = { DISPLAY = ":0"; };
   };
 
-  services.pcscd.enable = true;
+  services.pcscd.enable = false;
 
   # Fix yubikey permissions
   services.udev.extraRules = ''
