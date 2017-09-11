@@ -64,7 +64,7 @@
     openssl
     p7zip
     pass
-    pcsctools
+    # pcsctools
     pinentry
     postgresql96 # for psql
     powertop
@@ -255,7 +255,7 @@
     environment = { DISPLAY = ":0"; };
   };
 
-  services.pcscd.enable = true;
+  services.pcscd.enable = false;
 
   # Fix yubikey permissions
   services.udev.extraRules = ''
