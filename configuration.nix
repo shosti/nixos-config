@@ -151,7 +151,7 @@
     interval = "hourly";
     localuser = null;
     locate = pkgs.mlocate;
-    extraFlags = [ "-n '.git .backups .Trash .mail .cache'" ];
+    extraFlags = [ "-n '.git .backups .Trash .mail .cache vendor'" ];
   };
   services.redshift = {
     enable = true;
