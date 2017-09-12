@@ -44,7 +44,6 @@
     ghostscript
     git
     gnome2.gtk
-    gnome3.dconf
     gnome3.gtk # add explicitly so that things get linked
     gnupg
     hdparm
@@ -258,8 +257,6 @@
     postStart = "${pkgs.coreutils}/bin/sleep 1";
     environment = { DISPLAY = ":0"; };
   };
-
-  services.gnome3.tracker.enable = true;
 
   services.pcscd.enable = true;
 
