@@ -149,6 +149,7 @@
   services.locate = {
     enable = true;
     interval = "hourly";
+    localuser = null;
     locate = pkgs.mlocate;
     pruneNames = [ ".git" ];
   };
