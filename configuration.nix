@@ -150,6 +150,7 @@
     enable = true;
     interval = "hourly";
     localuser = "shosti";
+    pruneNames = [ ".git" ];
   };
   services.redshift = {
     enable = true;
