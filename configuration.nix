@@ -151,7 +151,7 @@
     interval = "hourly";
     localuser = null;
     locate = pkgs.mlocate;
-    pruneNames = [ ".git" ".backups" ".Trash" ];
+    pruneNames = [ ".git" ".backups" ".Trash" ".mail" ];
   };
   services.redshift = {
     enable = true;
