@@ -204,6 +204,9 @@
     };
   };
 
+  # Hack to get rid of annoying warning message
+  environment.variables.NO_AT_BRDIGE = "1";
+
   environment.variables.REDIS_HOST = "127.43.224.42";
 
   services.emacs = {
