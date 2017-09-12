@@ -86,7 +86,7 @@
     unzip
     usbutils
     vim
-    virt-manager
+    virtmanager
     virt-viewer
     vlc
     wget
