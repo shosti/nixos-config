@@ -149,7 +149,7 @@
   services.locate = {
     enable = true;
     interval = "hourly";
-    localUser = "shosti";
+    localuser = "shosti";
   };
   services.redshift = {
     enable = true;
