@@ -178,7 +178,7 @@
   };
 
   virtualisation.virtualbox.host.enable = true;
-  virtualisation.libvirtd.enable = false; # need to learn how to actually use it
+  virtualisation.libvirtd.enable = true;
 
   services.syncthing = {
     user = "shosti";
