@@ -78,11 +78,11 @@
     sl
     slop
     stow
-    strigi
     syncthing
     sysstat
     telnet
     traceroute
+    tracker
     tree
     unzip
     usbutils
