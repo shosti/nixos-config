@@ -86,6 +86,7 @@
     unzip
     usbutils
     vim
+    virt-viewer
     vlc
     wget
     whois
