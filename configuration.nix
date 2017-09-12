@@ -99,6 +99,7 @@
     xorg.xmodmap
     xsel
     zathura
+    zip
   ];
 
   nix.gc = {
