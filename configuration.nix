@@ -82,7 +82,7 @@
     sysstat
     telnet
     traceroute
-    tracker
+    gnome3.tracker
     tree
     unzip
     usbutils
