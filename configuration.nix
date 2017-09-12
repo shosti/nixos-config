@@ -43,7 +43,6 @@
     ffmpeg
     ghostscript
     git
-    gnome3.dconf
     gnome2.gtk # add explicitly so that things get linked
     gnome3.gtk
     gnupg
@@ -153,7 +152,6 @@
     latitude = "37.7618";
     longitude = "-122.4856";
   };
-  services.gnome3.tracker.enable = true;
 
   hardware.bluetooth.enable = false;
   hardware.trackpoint = {
