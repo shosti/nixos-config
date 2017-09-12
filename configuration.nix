@@ -78,6 +78,7 @@
     sl
     slop
     stow
+    strigi
     syncthing
     sysstat
     telnet
