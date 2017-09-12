@@ -170,7 +170,7 @@
 
   users.users.shosti = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "u2f" "libvirtd" ];
+    extraGroups = [ "wheel" "networkmanager" "u2f" "libvirtd" "systemd-journal" ];
     # Useful for testing
     openssh.authorizedKeys.keys = [
       "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoE5MAy3Sjt3taf14lJyh6T/qe21I/VzYqgcuiaDacLTa5cRyT/+qt6wtTb3UsD6I7zTtHuzr1klshSB/5vHP7LcZkr0P398ArOFV7MSv/sR2ZPX+9bbzL5Rlewqly4Ft+COdkGeWAWk32EeXyqGbLZVWUqSagatSa2YCWuT5FAFalbVg27nlbsXhVOTi0vDd2E33shJuVwOjq+HNA48ZMZXohLaTkxB+3dWZ1XfMcuyjkS/epHUvQeBGXff/Ox8EdIVXcfDtWL41N6GgkA0v+LAiGC84bxqOuGS97t3FMGUHodVIUSLZwblhT2M4P1h7IQa0N//QmSmwabO3newZZ shosti@themountain"
