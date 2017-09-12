@@ -82,7 +82,6 @@
     sysstat
     telnet
     traceroute
-    gnome3.tracker
     tree
     unzip
     usbutils
@@ -153,6 +152,7 @@
     latitude = "37.7618";
     longitude = "-122.4856";
   };
+  services.gnome3.tracker.enable = true;
 
   hardware.bluetooth.enable = false;
   hardware.trackpoint = {
