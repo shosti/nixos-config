@@ -181,7 +181,6 @@
 
   virtualisation.virtualbox.host.enable = true;
   virtualisation.libvirtd.enable = true;
-  services.u9fs.enable = true;
 
   services.syncthing = {
     user = "shosti";
