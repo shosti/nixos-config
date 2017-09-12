@@ -43,6 +43,7 @@
     ffmpeg
     ghostscript
     git
+    gnome3.dconf
     gnome2.gtk # add explicitly so that things get linked
     gnome3.gtk
     gnupg
