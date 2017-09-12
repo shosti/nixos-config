@@ -146,7 +146,11 @@
     '';
   };
   services.timesyncd.enable = true;
-  services.locate.enable = true;
+  services.locate = {
+    enable = true;
+    interval = "hourly";
+    localUser = "shosti";
+  };
   services.redshift = {
     enable = true;
     latitude = "37.7618";
