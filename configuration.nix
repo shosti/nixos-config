@@ -149,7 +149,7 @@
   services.locate = {
     enable = true;
     interval = "hourly";
-    localuser = "shosti";
+    package = "pkgs.mlocate";
     pruneNames = [ ".git" ];
   };
   services.redshift = {
