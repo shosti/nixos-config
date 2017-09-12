@@ -179,7 +179,6 @@
     ];
   };
 
-  virtualisation.virtualbox.host.enable = true;
   virtualisation.libvirtd.enable = true;
 
   services.syncthing = {
