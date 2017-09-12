@@ -149,7 +149,7 @@
   services.locate = {
     enable = true;
     interval = "hourly";
-    package = "pkgs.mlocate";
+    locate = pkgs.mlocate;
     pruneNames = [ ".git" ];
   };
   services.redshift = {
