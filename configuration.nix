@@ -86,6 +86,7 @@
     unzip
     usbutils
     vim
+    virt-manager
     virt-viewer
     vlc
     wget
@@ -180,6 +181,7 @@
 
   virtualisation.virtualbox.host.enable = true;
   virtualisation.libvirtd.enable = true;
+  services.u9fs.enable = true;
 
   services.syncthing = {
     user = "shosti";
