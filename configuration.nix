@@ -22,8 +22,6 @@
     forceImportRoot = false;
   };
 
-  boot.blacklistedKernelModules = [ "br_netfilter" ]; # Bad module that messes with whonix
-
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/Los_Angeles";
