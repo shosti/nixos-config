@@ -27,7 +27,6 @@
   time.timeZone = "America/Los_Angeles";
 
   environment.systemPackages = with pkgs; [
-    (keepass.override { plugins = [ keepass-keepasshttp ]; })
     acpi
     aspell
     aspellDicts.en
