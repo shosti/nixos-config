@@ -2,7 +2,19 @@
 
 set -eou pipefail
 
-export NIXOS_CONFIG="$(pwd)/configuration.nix"
+mkdir -p /tmp/nixtest
+cp -R pkgs /tmp/nixtest
+cp *.nix /tmp/nixtest
+
+TMPCONFIG=/tmp/nixtest/configuration.nix
+export NIXOS_CONFIG="$TMPCONFIG"
+
+sed -e '/timesyncd/d' -e '/^}/d' configuration.nix > "$TMPCONFIG"
+cat <<EOS >> "$TMPCONFIG"
+  users.users.$(whoami).openssh.authorizedKeys.keys = [ "$(cat ~/.ssh/id_rsa.pub)" ];
+}
+EOS
+
 nixos-rebuild build-vm
 echo "Connect with 'ssh -p 2222 localhost'"
 QEMU_NET_OPTS="hostfwd=tcp::2222-:22" ./result/bin/run-*-vm

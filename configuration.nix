@@ -172,10 +172,6 @@
   users.users.shosti = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "u2f" "libvirtd" "systemd-journal" "docker" ];
-    # Useful for testing
-    openssh.authorizedKeys.keys = [
-      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDR+WGIKLmvs/H0rB6muoAR3ebeRDF611qkhshrAGWUHkGZ9OvVGY24krnlrGiM0laBtU6hqTRpOG0JC4Ptf7sgAnnlDoyuvcUMcmTBzAhyS4F6Wn30QU1TyxwY3wjK5zN7iGkYOFY2+pXf1WR1yregAtOyo+EhlZm4HwCA9ZYKTXi15X+oUeag3lkGVJN4noDiwDiOy6WlIhirB3vFesMqjZ+oGodLXwXtdKHjXU4aUY1mFiXshu+BztCoIB0wMTBD2RXUqkCuCBAOeDE7yxWYLFqE4iJdUsGT1xyupFBArN5wBxx88eTNcN2NVlrzcgi+RvA12h2pYjLH864PzDYr shosti@drogo"
-    ];
   };
 
   virtualisation.libvirtd.enable = true;
