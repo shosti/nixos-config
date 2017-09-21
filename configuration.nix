@@ -250,6 +250,21 @@
   };
 
   security.sudo.wheelNeedsPassword = false;
+  security.pam.loginLimits = [
+    {
+      domain = "shosti";
+      type = "hard";
+      item = "nofile";
+      value = "262144"; # seems like a nice round number...
+    }
+
+    {
+      domain = "shosti";
+      type = "soft";
+      item = "nofile";
+      value = "262144";
+    }
+  ];
 
   # Make sure screen is locked on suspend
   systemd.services."i3lock" = {
