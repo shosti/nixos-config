@@ -227,6 +227,7 @@
   services.dovecot2 = {
     enable = true;
     configFile = "/etc/nixos/config/dovecot.conf";
+    createMailUser = false;
   };
 
   # passdb file for dovecot
