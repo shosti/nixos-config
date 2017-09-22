@@ -9,7 +9,7 @@ cp *.nix /tmp/nixtest
 TMPCONFIG=/tmp/nixtest/configuration.nix
 export NIXOS_CONFIG="$TMPCONFIG"
 
-sed -e '/timesyncd/d' -e '/^}/d' configuration.nix > "$TMPCONFIG"
+sed -e '/timesyncd/d' -e '/^}$/d' configuration.nix > "$TMPCONFIG"
 cat <<EOS >> "$TMPCONFIG"
   users.users.$(whoami).openssh.authorizedKeys.keys = [ "$(cat ~/.ssh/id_rsa.pub)" ];
 }
