@@ -118,7 +118,11 @@
   };
 
   programs.bash.enableCompletion = true;
-  programs.ssh.startAgent = false; # Use gpg instead
+
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   services.xserver = {
     enable = true;
