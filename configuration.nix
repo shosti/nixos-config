@@ -90,9 +90,6 @@
     vlc
     wget
     whois
-    ykpers
-    yubikey-neo-manager
-    yubioath-desktop
     xautolock
     xbindkeys
     xorg.xbacklight
