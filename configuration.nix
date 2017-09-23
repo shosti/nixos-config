@@ -54,8 +54,6 @@
     iotop
     isync
     jq
-    keybase
-    keybase-gui
     libu2f-host
     lshw
     lsof
@@ -162,11 +160,6 @@
     enable = true;
     latitude = "37.7618";
     longitude = "-122.4856";
-  };
-  services.keybase.enable = true;
-  services.kbfs = {
-    enable = true;
-    mountPoint = "/keybase";
   };
 
   hardware.bluetooth.enable = false;
