@@ -164,6 +164,7 @@
     longitude = "-122.4856";
   };
   services.keybase.enable = true;
+  services.kbfs.enable = true;
 
   hardware.bluetooth.enable = false;
   hardware.trackpoint = {
