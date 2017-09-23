@@ -137,10 +137,6 @@
 
     libinput = {
       enable = true;
-      additionalOptions = ''
-        Option "VertScrollDelta" "-111"
-        Option "HorizScrollDelta" "-111"
-      '';
     };
   };
   services.tlp = {
