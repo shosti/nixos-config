@@ -175,12 +175,8 @@
     extraGroups = [ "wheel" "networkmanager" "u2f" "libvirtd" "systemd-journal" "docker" ];
   };
 
-  virtualisation.libvirtd = {
-    enable = true;
-    extraConfig = ''
-      uri_default = "qemu:///system"
-    '';
-  };
+  virtualisation.libvirtd.enable = true;
+  environment.variables.LIBVIRT_DEFAULT_URI = "qemu:///system";
   virtualisation.docker.enable = true;
 
   services.syncthing = {
