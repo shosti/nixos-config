@@ -130,12 +130,8 @@
     windowManager.xmonad.enableContribAndExtras = true;
     desktopManager.xterm.enable = false;
 
-    synaptics = {
+    libinput = {
       enable = true;
-      horizEdgeScroll = false;
-      horizTwoFingerScroll = true;
-      vertEdgeScroll = false;
-      vertTwoFingerScroll = true;
       additionalOptions = ''
         Option "VertScrollDelta" "-111"
         Option "HorizScrollDelta" "-111"
