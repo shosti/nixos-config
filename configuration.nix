@@ -22,6 +22,11 @@
     forceImportRoot = false;
   };
 
+  boot.kernel.sysctl = {
+    "net.core.rmem_max" = 4194304;
+    "net.core.wmem_max" = 1048576;
+  };
+
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/Los_Angeles";
