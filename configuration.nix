@@ -54,6 +54,8 @@
     iotop
     isync
     jq
+    keybase
+    keybase-gui
     libu2f-host
     lshw
     lsof
@@ -161,6 +163,7 @@
     latitude = "37.7618";
     longitude = "-122.4856";
   };
+  services.keybase.enable = true;
 
   hardware.bluetooth.enable = false;
   hardware.trackpoint = {
