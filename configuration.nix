@@ -166,6 +166,7 @@
   services.keybase.enable = true;
   services.kbfs = {
     enable = true;
+    mountPoint = "/keybase";
   };
 
   hardware.bluetooth.enable = false;
