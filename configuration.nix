@@ -26,8 +26,6 @@
     "net.core.rmem_max" = 4194304;
     "net.core.wmem_max" = 1048576;
   };
-  networking.enableIPv6 = false;
-  networking.firewall.checkReversePath = "loose";
 
   networking.networkmanager.enable = true;
 
