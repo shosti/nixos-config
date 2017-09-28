@@ -35,6 +35,7 @@
     acpi
     aspell
     aspellDicts.en
+    bcc
     blktrace
     chromium
     cowsay
