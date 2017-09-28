@@ -35,7 +35,6 @@
     acpi
     aspell
     aspellDicts.en
-    bcc
     blktrace
     chromium
     cowsay
@@ -61,6 +60,7 @@
     isync
     jq
     libu2f-host
+    linuxPackages.bcc
     lshw
     lsof
     maim
