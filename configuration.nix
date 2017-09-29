@@ -61,7 +61,7 @@
     isync
     jq
     libu2f-host
-    linuxPackages.bcc
+    linuxPackages_4_13.bcc
     lshw
     lsof
     maim
