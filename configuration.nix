@@ -16,7 +16,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "zfs" ];
   boot.tmpOnTmpfs = true;
-  boot.kernelPackages = nixos.linuxPackages_4_13;
+  boot.kernelPackages = pkgs.linuxPackages_4_13;
 
   boot.zfs = {
     forceImportAll = false;
