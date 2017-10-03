@@ -106,6 +106,7 @@
   ];
 
   programs.bcc.enable = true;
+  programs.command-not-found.enable = true;
 
   nix.gc = {
     automatic = true;
