@@ -107,6 +107,7 @@
 
   programs.bcc.enable = true;
   programs.command-not-found.enable = true;
+  programs.browserpass.enable = true;
 
   nix.gc = {
     automatic = true;
