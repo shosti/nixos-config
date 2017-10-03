@@ -17,7 +17,6 @@
   boot.supportedFilesystems = [ "zfs" ];
   boot.tmpOnTmpfs = true;
   boot.kernelPackages = pkgs.linuxPackages_4_13;
-  boot.extraModulePackages = [ config.boot.kernelPackages.bcc ];
 
   boot.zfs = {
     forceImportAll = false;
@@ -39,7 +38,6 @@
     aspellDicts.en
     blktrace
     chromium
-    config.boot.kernelPackages.bcc
     cowsay
     direnv
     dmenu
@@ -106,6 +104,8 @@
     zathura
     zip
   ];
+
+  programs.bcc.enable = true;
 
   nix.gc = {
     automatic = true;
