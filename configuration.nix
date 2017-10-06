@@ -46,6 +46,7 @@
     ethtool
     exfat
     ffmpeg
+    fira-code
     ghostscript
     git
     gnome2.gtk
