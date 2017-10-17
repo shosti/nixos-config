@@ -120,6 +120,11 @@
     dates = "weekly";
   };
 
+  system.autoUpgrade = {
+    enable = true;
+    dates = "daily";
+  };
+
   fonts = {
     enableFontDir = true;
     enableGhostscriptFonts = true;
