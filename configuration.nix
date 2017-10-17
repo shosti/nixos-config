@@ -227,6 +227,11 @@
     flags = "-k -p --utc";
   };
 
+  services.zfs.autoScrub = {
+    enable = true;
+    interval = "daily";
+  };
+
   services.dovecot2 = {
     enable = true;
     configFile = "/etc/nixos/config/dovecot.conf";
