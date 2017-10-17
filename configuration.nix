@@ -112,6 +112,12 @@
   nix.gc = {
     automatic = true;
     options = "--delete-older-than 30d";
+    dates = "weekly";
+  };
+
+  nix.optimise = {
+    automatic = true;
+    dates = "weekly";
   };
 
   fonts = {
