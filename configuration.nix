@@ -70,6 +70,7 @@
     openssl
     p7zip
     pass
+    pciutils
     pinentry
     postgresql96 # for psql
     powertop
@@ -96,6 +97,7 @@
     vlc
     wget
     whois
+    wirelesstools
     xautolock
     xbindkeys
     xorg.xbacklight
