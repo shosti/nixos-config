@@ -186,7 +186,7 @@
 
   users.users.shosti = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "u2f" "libvirtd" "systemd-journal" "docker" ];
+    extraGroups = [ "wheel" "networkmanager" "disk" "u2f" "libvirtd" "systemd-journal" "docker" ];
   };
 
   virtualisation.libvirtd.enable = true;
