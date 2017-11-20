@@ -182,11 +182,11 @@
     emulateWheel = true;
   };
 
-  users.groups = { u2f = {}; };
+  users.groups = { u2f = {}; usb = {}; };
 
   users.users.shosti = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "disk" "u2f" "libvirtd" "systemd-journal" "docker" ];
+    extraGroups = [ "wheel" "networkmanager" "usb" "u2f" "libvirtd" "systemd-journal" "docker" ];
   };
 
   virtualisation.libvirtd.enable = true;
@@ -299,7 +299,7 @@
     environment = { DISPLAY = ":0"; };
   };
 
-  # Fix yubikey permissions
+  # Fix yubikey and USB permissions
   services.udev.extraRules = ''
     ACTION!="add|change", GOTO="u2f_end"
 
@@ -308,6 +308,8 @@
     SUBSYSTEM=="usb", ATTRS{idVendor}=="1050", ATTRS{idProduct}=="0113|0114|0115|0116|0120|0200|0402|0403|0406|0407|0410", GROUP="u2f"
 
     LABEL="u2f_end"
+
+    SUBSYSTEM=="usb", ATTR{removable}=="removable", GROUP="usb"
   '';
 
   # Some ngnix stuff for work...
