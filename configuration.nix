@@ -111,22 +111,6 @@
   programs.bcc.enable = true;
   programs.command-not-found.enable = true;
 
-  nix.gc = {
-    automatic = true;
-    options = "--delete-older-than 30d";
-    dates = "weekly";
-  };
-
-  nix.optimise = {
-    automatic = true;
-    dates = [ "weekly" ];
-  };
-
-  system.autoUpgrade = {
-    enable = true;
-    dates = "daily";
-  };
-
   fonts = {
     enableFontDir = true;
     enableGhostscriptFonts = true;
