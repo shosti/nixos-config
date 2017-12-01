@@ -41,6 +41,7 @@
     cowsay
     direnv
     dmenu
+    docker-gc
     emacs25
     espeak
     ethtool
