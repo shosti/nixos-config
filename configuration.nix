@@ -178,7 +178,7 @@
   environment.variables.LIBVIRT_DEFAULT_URI = "qemu:///system";
   virtualisation.docker = {
     enable = true;
-    extraOptions = "--storage-driver=zfs";
+    storageDriver = "zfs";
   };
 
   services.syncthing = {
