@@ -41,7 +41,6 @@
     direnv
     dmenu
     docker-gc
-    emacs25
     espeak
     ethtool
     exfat
@@ -218,7 +217,10 @@
 
   services.emacs = {
     enable = true;
-    package = pkgs.emacs25;
+    package = pkgs.emacs.override {
+      withGTK2 = false;
+      withGTK3 = false;
+    };
     defaultEditor = true;
   };
 
