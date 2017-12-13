@@ -119,6 +119,7 @@
       noto-fonts
       noto-fonts-emoji
       symbola
+      emojione
     ];
   };
 
