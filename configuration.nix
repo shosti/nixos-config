@@ -304,32 +304,32 @@
 
   # Some ngnix stuff for work...
   networking.extraHosts = ''
-    127.0.0.1 app.rainforest.dev
-    127.0.0.1 admin.rainforest.dev
-    127.0.0.1 portal.rainforest.dev
-    127.0.0.1 automation.rainforest.dev
+    127.0.0.1 app.rainforest.test
+    127.0.0.1 admin.rainforest.test
+    127.0.0.1 portal.rainforest.test
+    127.0.0.1 automation.rainforest.test
   '';
 
   services.nginx.virtualHosts = {
-    "app.rainforest.dev" = {
+    "app.rainforest.test" = {
       locations."/" = {
         proxyPass = "http://127.0.0.1:8002";
       };
     };
 
-    "admin.rainforest.dev" = {
+    "admin.rainforest.test" = {
       locations."/" = {
         proxyPass = "http://127.0.0.1:8002";
       };
     };
 
-    "portal.rainforest.dev" = {
+    "portal.rainforest.test" = {
       locations."/" = {
         proxyPass = "http://127.0.0.1:8002";
       };
     };
 
-    "automation.rainforest.dev" = {
+    "automation.rainforest.test" = {
       locations."/" = {
         proxyPass = "http://127.0.0.1:8002";
       };
