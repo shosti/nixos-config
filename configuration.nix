@@ -303,6 +303,8 @@
     SUBSYSTEM=="usb", ATTR{removable}=="removable", GROUP="usb"
   '';
 
+  services.zerotierone.enable = true;
+
   # Some ngnix stuff for work...
   networking.extraHosts = ''
     127.0.0.1 app.rainforest.test
