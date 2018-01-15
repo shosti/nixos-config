@@ -304,6 +304,7 @@
   '';
 
   services.zerotierone.enable = true;
+  networking.firewall.allowedUDPPorts = [ 9993 ]; # zerotier likes that port
 
   # Some ngnix stuff for work...
   networking.extraHosts = ''
