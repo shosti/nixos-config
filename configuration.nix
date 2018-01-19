@@ -312,6 +312,9 @@
     127.0.0.1 admin.rainforest.test
     127.0.0.1 portal.rainforest.test
     127.0.0.1 automation.rainforest.test
+
+    # Zerotier machines
+    172.23.129.187 oldtown
   '';
 
   services.nginx.virtualHosts = {
