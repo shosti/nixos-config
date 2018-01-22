@@ -38,6 +38,7 @@
     aspellDicts.en
     blktrace
     chromium
+    cifs-utils
     cowsay
     direnv
     dmenu
