@@ -99,7 +99,6 @@
     wget
     whois
     wirelesstools
-    wireshark
     xautolock
     xbindkeys
     xorg.xbacklight
@@ -110,6 +109,7 @@
     zip
   ];
 
+  programs.wireshark.enable = true;
   programs.bcc.enable = true;
   programs.command-not-found.enable = true;
 
@@ -173,7 +173,7 @@
 
   users.users.shosti = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "usb" "u2f" "libvirtd" "systemd-journal" "docker" "dialout" ];
+    extraGroups = [ "wheel" "networkmanager" "usb" "u2f" "libvirtd" "systemd-journal" "docker" "dialout" "wireshark" ];
   };
 
   virtualisation.libvirtd.enable = true;
