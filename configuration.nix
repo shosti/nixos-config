@@ -110,7 +110,7 @@
   ];
 
   programs.wireshark.enable = true;
-  programs.wireshark.package = packages.wireshark;
+  programs.wireshark.package = pkgs.wireshark;
   programs.bcc.enable = true;
   programs.command-not-found.enable = true;
 
