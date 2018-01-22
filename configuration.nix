@@ -99,6 +99,7 @@
     wget
     whois
     wirelesstools
+    wireshark
     xautolock
     xbindkeys
     xorg.xbacklight
