@@ -87,6 +87,7 @@
     syncthing
     sysstat
     telnet
+    termite
     traceroute
     tree
     unzip
