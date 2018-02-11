@@ -57,7 +57,6 @@
     hfsprogs
     htop
     hwloc
-    i3lock
     imagemagick7
     iotop
     isync
@@ -136,9 +135,7 @@
 
   services.xserver = {
     enable = true;
-    windowManager.xmonad.enable = true;
-    windowManager.xmonad.enableContribAndExtras = true;
-    desktopManager.xterm.enable = false;
+    windowManager.i3.enable = true;
 
     libinput = {
       enable = true;
