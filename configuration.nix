@@ -172,7 +172,7 @@
 
   users.users.shosti = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "usb" "u2f" "libvirtd" "systemd-journal" "docker" "dialout" "wireshark" ];
+    extraGroups = [ "wheel" "networkmanager" "usb" "u2f" "libvirtd" "systemd-journal" "docker" "dialout" "wireshark" "media" ];
   };
 
   virtualisation.libvirtd.enable = true;
@@ -342,6 +342,20 @@
         proxyPass = "http://127.0.0.1:8002";
       };
     };
+  };
+
+  users.groups.media = {};
+
+  fileSystems."/mnt/share" = {
+    device = "//oldtown/shosti";
+    fsType = "cifs";
+    options = ["${cifs_automount_opts},credentials=/etc/nixos/smb-secrets,uid=shosti,gid=users"];
+  };
+
+  fileSystems."/mnt/media" = {
+    device = "//oldtown/media";
+    fsType = "cifs";
+    options = ["${cifs_automount_opts},credentials=/etc/nixos/smb-secrets,uid=shosti,gid=media"];
   };
 
   services.nginx.recommendedProxySettings = true;
