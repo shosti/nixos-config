@@ -360,6 +360,12 @@ in {
     options = ["${cifs_automount_opts},credentials=/etc/nixos/smb-secrets,uid=shosti,gid=media"];
   };
 
+  services.mpd = {
+    enable = true;
+    musicDirectory = "/mnt/media/Media/Music";
+    group = "media";
+  };
+
   services.nginx.recommendedProxySettings = true;
   services.nginx.enable = true;
 
