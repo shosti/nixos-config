@@ -192,6 +192,13 @@ in {
     dataDir = "/home/shosti/.syncthing";
   };
 
+  services.krb5 = {
+    defaultRealm = "EMANUEL.INDUSTRIES";
+    domainRealm = "emanuel.industries";
+    kdc = "ipa.emanuel.industries";
+    kerberosAdminServer = "ipa.emanuel.industries";
+  };
+
   containers.postgres = {
     autoStart = true;
     config = { config, pkgs, ... }: {
