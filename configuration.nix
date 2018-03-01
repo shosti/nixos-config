@@ -192,7 +192,7 @@ in {
     dataDir = "/home/shosti/.syncthing";
   };
 
-  services.krb5 = {
+  krb5 = {
     defaultRealm = "EMANUEL.INDUSTRIES";
     domainRealm = "emanuel.industries";
     kdc = "ipa.emanuel.industries";
