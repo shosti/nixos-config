@@ -193,6 +193,7 @@ in {
   };
 
   krb5 = {
+    enabled = true;
     defaultRealm = "EMANUEL.INDUSTRIES";
     domainRealm = "emanuel.industries";
     kdc = "ipa.emanuel.industries";
