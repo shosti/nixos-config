@@ -172,11 +172,11 @@ in {
     emulateWheel = true;
   };
 
-  users.groups = { u2f = {}; usb = {}; };
+  users.groups = { u2f = {}; usb = {}; davfs2 = {}; };
 
   users.users.shosti = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "usb" "u2f" "libvirtd" "systemd-journal" "docker" "dialout" "wireshark" "media" ];
+    extraGroups = [ "wheel" "networkmanager" "usb" "u2f" "libvirtd" "systemd-journal" "docker" "dialout" "wireshark" "media" "davfs2" ];
   };
 
   virtualisation.libvirtd.enable = true;
