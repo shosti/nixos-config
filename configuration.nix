@@ -173,6 +173,10 @@ in {
   };
 
   users.groups = { u2f = {}; usb = {}; davfs2 = {}; };
+  users.users.davfs2 = {
+    isSystemUser = true;
+    group = "davfs2";
+  };
 
   users.users.shosti = {
     isNormalUser = true;
