@@ -164,6 +164,7 @@ in {
     latitude = "37.7618";
     longitude = "-122.4856";
   };
+  services.gnome3.gvfs.enable = true;
 
   hardware.bluetooth.enable = false;
   hardware.trackpoint = {
