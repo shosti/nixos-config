@@ -69,6 +69,7 @@ in {
     lsof
     maim
     mpc_cli
+    mpd
     msmtp
     nethogs
     openssl
