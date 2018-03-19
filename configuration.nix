@@ -129,6 +129,7 @@ in {
     ];
     defaultSearchProviderSearchURL = "https://duckduckgo.com/?q=%s";
   };
+  programs.browserpass.enable = true;
 
   fonts = {
     enableFontDir = true;
