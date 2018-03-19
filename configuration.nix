@@ -41,6 +41,7 @@ in {
     blktrace
     cifs-utils
     cowsay
+    chromiumBeta
     davfs2
     direnv
     dmenu
