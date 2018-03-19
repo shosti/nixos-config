@@ -39,7 +39,7 @@ in {
     aspell
     aspellDicts.en
     blktrace
-    chromium
+    (chromium.override { gnome = gnome3; })
     cifs-utils
     cowsay
     davfs2
