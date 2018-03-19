@@ -232,6 +232,7 @@ in {
     package = pkgs.emacs.override {
       withGTK2 = false;
       withGTK3 = false;
+      imagemagick = pkgs.imagemagick;
     };
     defaultEditor = true;
   };
