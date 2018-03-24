@@ -205,7 +205,6 @@ in {
   services.syncthing = {
     user = "shosti";
     enable = true;
-    useInotify = true;
     dataDir = "/home/shosti/.syncthing";
   };
 
@@ -232,9 +231,6 @@ in {
       };
     };
   };
-
-  # Hack to get rid of annoying warning message
-  environment.variables.NO_AT_BRIDGE = "1";
 
   environment.variables.REDIS_HOST = "127.43.224.42";
 
