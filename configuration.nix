@@ -219,6 +219,7 @@ in {
           host all all 127.0.0.1/32 trust
         '';
       };
+      system.stateVersion = "18.03";
     };
   };
 
@@ -385,5 +386,5 @@ in {
   services.nginx.enable = true;
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "17.09";
+  system.stateVersion = "18.03";
 }
