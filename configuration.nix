@@ -36,6 +36,7 @@ in {
 
   environment.systemPackages = with pkgs; [
     acpi
+    alsaUtils
     aspell
     aspellDicts.en
     blktrace
