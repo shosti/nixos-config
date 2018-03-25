@@ -243,7 +243,7 @@ in {
     enable = true;
     package = pkgs.emacs.override {
       withGTK2 = false;
-      withGTK3 = false;
+      withGTK3 = true;
       imagemagick = pkgs.imagemagick7;
     };
     defaultEditor = true;
