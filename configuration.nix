@@ -50,6 +50,7 @@ in {
     espeak
     ethtool
     exfat
+    feh
     ffmpeg
     fira-code
     ghostscript
