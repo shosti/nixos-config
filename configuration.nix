@@ -31,6 +31,7 @@ in {
   };
 
   networking.networkmanager.enable = true;
+  networking.enableIPv6 = false;
 
   time.timeZone = "America/Los_Angeles";
 
