@@ -67,6 +67,7 @@ in {
     iotop
     isync
     jq
+    ldns
     libu2f-host
     lshw
     lsof
