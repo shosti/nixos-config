@@ -122,17 +122,6 @@ in {
   programs.wireshark.package = pkgs.wireshark;
   programs.bcc.enable = true;
   programs.command-not-found.enable = true;
-  programs.chromium = {
-    enable = true;
-    extensions = [
-      "naepdomgkenhinolocfifgehidddafch" # browserpass-ce
-      "gcbommkclmclpchllfjekcdonpmejbdp" # https everywhere
-      "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # privacy badger
-      "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
-      "dbepggeogbaibhgnhhndojpepiihcmeb" # vimium
-    ];
-    defaultSearchProviderSearchURL = "https://duckduckgo.com/?q=%s";
-  };
 
   fonts = {
     enableFontDir = true;
