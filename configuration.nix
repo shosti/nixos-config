@@ -251,6 +251,8 @@ in {
     interval = "daily";
   };
 
+  users.groups.dovecot = {};
+
   services.dovecot2 = {
     enable = true;
     configFile = "/etc/nixos/config/dovecot.conf";
