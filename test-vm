@@ -5,6 +5,7 @@ set -eou pipefail
 mkdir -p /tmp/nixtest
 cp -R pkgs /tmp/nixtest
 cp ./*.nix /tmp/nixtest
+cp ./facebook-hosts /tmp/nixtest
 
 TMPCONFIG=/tmp/nixtest/configuration.nix
 export NIXOS_CONFIG="$TMPCONFIG"
