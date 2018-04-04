@@ -332,6 +332,7 @@ in {
 
     # Zerotier machines
     172.23.129.187 oldtown
+
   '' + builtins.readFile ./facebook-hosts;
 
   services.nginx.virtualHosts = {
