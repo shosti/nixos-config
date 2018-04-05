@@ -194,6 +194,7 @@ in {
   };
 
   virtualisation.libvirtd.enable = true;
+  virtualisation.virtualbox.enable = true;
   environment.variables.LIBVIRT_DEFAULT_URI = "qemu:///system";
   virtualisation.docker = {
     enable = true;
