@@ -324,6 +324,7 @@ in {
 
   services.zerotierone.enable = true;
   networking.firewall.allowedUDPPorts = [ 9993 ]; # zerotier likes that port
+  networking.firewall.trustedInterfaces = [ "virbr0" "virbr2" ]; # for kvm
 
   # Some ngnix stuff for work...
   networking.extraHosts = ''
