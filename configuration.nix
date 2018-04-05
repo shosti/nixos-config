@@ -136,6 +136,8 @@ in {
     ];
   };
 
+  sound.enable = true;
+
   programs.bash.enableCompletion = true;
 
   programs.gnupg.agent = {
