@@ -90,6 +90,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   yasnippet
 ]) ++ (with epkgs.melpaPackages; [
   evil-paredit
+  nix-mode
   ox-reveal
   slack
   toml-mode
