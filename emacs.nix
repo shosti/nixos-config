@@ -70,6 +70,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   emms
   emojify
   erlang
+  ess
   evil
   evil-magit
   evil-matchit
