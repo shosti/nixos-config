@@ -123,6 +123,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   company-statistics
   hydra
   nlinum
+  rainbow-mode
   seq
   undo-tree
 ]) ++ (with epkgs.orgPackages; [
