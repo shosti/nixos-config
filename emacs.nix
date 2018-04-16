@@ -133,6 +133,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   yaml-mode
   yasnippet
 ]) ++ (with epkgs.melpaPackages; [
+  bbdb
   evil-paredit
   findr
   nix-mode
