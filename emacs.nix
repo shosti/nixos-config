@@ -55,7 +55,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   helm
   highlight-parentheses
   idle-highlight-mode
-  ido-ubiquitous
+  ido-completing-read-plus
   inf-ruby
   inflections
   js2-mode
