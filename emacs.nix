@@ -31,6 +31,7 @@ emacsWithPackages = (pkgs.emacsPackagesNgGen myEmacs).emacsWithPackages;
 in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   ace-jump-mode
   ag
+  alchemist
   calfw
   cider
   clojure-mode
@@ -117,6 +118,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   slack
   toml-mode
 ]) ++ (with epkgs.elpaPackages; [
+  debbugs
   company
   company-statistics
   hydra
