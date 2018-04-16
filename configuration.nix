@@ -40,6 +40,7 @@ in {
     alsaUtils
     aspell
     aspellDicts.en
+    beancount
     blktrace
     cifs-utils
     cowsay

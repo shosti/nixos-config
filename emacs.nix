@@ -1,12 +1,33 @@
 { pkgs ? import <nixpkgs> {} }:
 
-let
-  myEmacs = pkgs.emacs.override {
-    withGTK2 = false;
-    withGTK3 = true;
-    imagemagick = pkgs.imagemagick;
+let myEmacs = pkgs.emacs.override {
+  withGTK2 = false;
+  withGTK3 = true;
+  imagemagick = pkgs.imagemagick;
+};
+
+# Get the beancount elisp package, since it seems to not be available on MELPA
+# for whatever reason...
+beancount = pkgs.stdenv.mkDerivation rec {
+  name = "beancount";
+  version = "2.0.0";
+  src = pkgs.fetchurl {
+    url = "https://bitbucket.org/blais/${name}/get/${version}.tar.gz";
+    sha256 = "0idj8his820mlmyfg955r4znw00ql97sdbhh887s5swdyb9wnady";
   };
-  emacsWithPackages = (pkgs.emacsPackagesNgGen myEmacs).emacsWithPackages;
+
+  buildPhase = ''
+    ${pkgs.emacs}/bin/emacs --batch -f batch-byte-compile editors/emacs/*.el
+  '';
+
+  installPhase = ''
+    mkdir -p $out/share/emacs/site-lisp
+    cp editors/emacs/*.el* $out/share/emacs/site-lisp/
+  '';
+};
+
+emacsWithPackages = (pkgs.emacsPackagesNgGen myEmacs).emacsWithPackages;
+
 in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   ace-jump-mode
   ag
@@ -103,4 +124,6 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   undo-tree
 ]) ++ (with epkgs.orgPackages; [
   org-plus-contrib
+]) ++ ([
+  beancount
 ]))
