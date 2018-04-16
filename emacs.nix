@@ -74,6 +74,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   go-eldoc
   go-mode
   go-scratch
+  goto-last-change
   haml-mode
   haskell-mode
   helm
