@@ -26,11 +26,14 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   edit-server
   elisp-slime-nav
   elixir-mode
+  emms
   emojify
   erlang
   evil
+  evil-magit
   evil-matchit
   evil-nerd-commenter
+  evil-surround
   expand-region
   f
   flx
@@ -87,7 +90,6 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   yasnippet
 ]) ++ (with epkgs.melpaPackages; [
   evil-paredit
-  evil-surround
   ox-reveal
   slack
   toml-mode
