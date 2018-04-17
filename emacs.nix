@@ -112,6 +112,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   magit
   markdown-mode
   mmm-mode
+  nginx-mode
   paredit
   password-store
   prodigy
