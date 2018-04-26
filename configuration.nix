@@ -182,7 +182,6 @@ in {
     enable = true;
     emulateWheel = true;
   };
-  hardware.pulseaudio.enable = true;
 
   users.groups = { u2f = {}; usb = {}; davfs2 = {}; };
   users.users.davfs2 = {
