@@ -339,10 +339,15 @@ in {
 
   # Some ngnix stuff for work...
   networking.extraHosts = ''
-    127.0.0.1 app.rainforest.test
-    127.0.0.1 admin.rainforest.test
-    127.0.0.1 portal.rainforest.test
-    127.0.0.1 automation.rainforest.test
+    192.168.39.117 app.rainforest.test
+    192.168.39.117 admin.rainforest.test
+    192.168.39.117 portal.rainforest.test
+    192.168.39.117 automation.rainforest.test
+
+    # 127.0.0.1 app.rainforest.test
+    # 127.0.0.1 admin.rainforest.test
+    # 127.0.0.1 portal.rainforest.test
+    # 127.0.0.1 automation.rainforest.test
 
     # Zerotier machines
     172.23.129.187 oldtown
@@ -353,7 +358,13 @@ in {
     "app.rainforest.test" = {
       locations."/" = {
         proxyPass = "http://127.0.0.1:8002";
+        extraConfig = ''
+          proxy_pass_request_headers on;
+        '';
       };
+      extraConfig = ''
+        underscores_in_headers on;
+      '';
     };
 
     "admin.rainforest.test" = {
