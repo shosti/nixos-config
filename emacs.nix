@@ -100,6 +100,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   haskell-mode
   helm
   highlight-parentheses
+  htmlize
   idle-highlight-mode
   ido-completing-read-plus
   inf-ruby
