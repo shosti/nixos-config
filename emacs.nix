@@ -113,6 +113,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   magit
   markdown-mode
   mmm-mode
+  mustache-mode
   nginx-mode
   paredit
   password-store
