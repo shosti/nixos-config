@@ -58,6 +58,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   company-emoji
   company-ghc
   company-go
+  company-terraform
   concurrent
   dash
   dash-functional
@@ -127,6 +128,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   s
   scss-mode
   smex
+  terraform-mode
   vlf
   web-mode
   wgrep
