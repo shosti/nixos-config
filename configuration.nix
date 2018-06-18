@@ -339,10 +339,11 @@ in {
 
   # Some ngnix stuff for work...
   networking.extraHosts = ''
-    192.168.39.117 app.rainforest.test
-    192.168.39.117 admin.rainforest.test
-    192.168.39.117 portal.rainforest.test
-    192.168.39.117 automation.rainforest.test
+    192.168.39.59 app.rainforest.test
+    192.168.39.59 admin.rainforest.test
+    192.168.39.59 portal.rainforest.test
+    192.168.39.59 automation.rainforest.test
+    192.168.39.59 schrute.rainforest.test
 
     # 127.0.0.1 app.rainforest.test
     # 127.0.0.1 admin.rainforest.test
