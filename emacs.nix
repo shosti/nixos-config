@@ -90,7 +90,6 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   git-commit
   git-gutter
   git-gutter-fringe
-  git-timemachine
   gitconfig-mode
   gitignore-mode
   go-eldoc
