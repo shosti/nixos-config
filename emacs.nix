@@ -143,6 +143,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   evil-paredit
   findr
   nix-mode
+  puppet-mode
   ox-reveal
   slack
   toml-mode
