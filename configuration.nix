@@ -54,7 +54,6 @@ in {
     exfat
     feh
     ffmpeg
-    fira-code
     ghostscript
     git
     gnome2.gtk
@@ -128,6 +127,7 @@ in {
     enableFontDir = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
+      fira-code
       font-droid
       (import ./pkgs/droid-slashed.nix)
       noto-fonts
