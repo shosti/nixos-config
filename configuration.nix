@@ -16,7 +16,7 @@ in {
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.supportedFilesystems = [ "zfs" ];
+  boot.supportedFilesystems = [ "zfs" "nfs4" ];
   boot.tmpOnTmpfs = true;
   boot.kernelPackages = pkgs.linuxPackages_4_14;
 
