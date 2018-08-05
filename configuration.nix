@@ -75,6 +75,7 @@ in {
     mpc_cli
     mpd
     msmtp
+    nfs-utils
     nethogs
     openssl
     p7zip
