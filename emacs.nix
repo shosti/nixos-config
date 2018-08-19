@@ -138,6 +138,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   yaml-mode
   yasnippet
 ]) ++ (with epkgs.melpaPackages; [
+  bash-completion
   bbdb
   crystal-mode
   evil-paredit
