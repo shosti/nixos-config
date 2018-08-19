@@ -351,8 +351,10 @@ in {
     # 127.0.0.1 automation.rainforest.test
 
     # Zerotier machines
+    172.23.129.187 oldtown.emanuel.industries
+    172.23.233.97 drogo.emanuel.industries
     172.23.129.187 oldtown
-
+    172.23.233.97 drogo
   '' + builtins.readFile ./facebook-hosts;
 
   services.nginx.virtualHosts = {
