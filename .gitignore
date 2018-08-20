@@ -4,3 +4,4 @@ hardware-configuration.nix
 /config/passwd
 /result
 *.qcow2
+/krb5.keytab

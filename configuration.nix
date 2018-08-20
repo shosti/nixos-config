@@ -336,6 +336,7 @@ in {
   services.zerotierone.enable = true;
   networking.firewall.allowedUDPPorts = [ 9993 ]; # zerotier likes that port
   networking.firewall.trustedInterfaces = [ "virbr0" "virbr2" ]; # for kvm
+  networking.domain = "emanuel.industries";
 
   # Some ngnix stuff for work...
   networking.extraHosts = ''
@@ -390,6 +391,27 @@ in {
   };
 
   users.groups.media = {};
+
+  krb5 = {
+    enable = false;
+    domain_realm = {
+      "emanuel.industries" = "EMANUEL.INDUSTRIES";
+      ".emanuel.industries" = "EMANUEL.INDUSTRIES";
+    };
+    libdefaults.default_realm = "EMANUEL.INDUSTRIES";
+    kerberos = pkgs.heimdalFull;
+    realms = {
+      "EMANUEL.INDUSTRIES" = {
+        admin_server = "kdc.emanuel.industries";
+        kdc = "kdc.emanuel.industries";
+      };
+    };
+  };
+
+  environment.etc."krb5.keytab" = {
+    source = "/etc/nixos/krb5.keytab";
+  };
+
 
   fileSystems."/mnt/share" = {
     device = "//oldtown/shosti";
