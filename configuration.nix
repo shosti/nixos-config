@@ -4,9 +4,7 @@
 
 { config, pkgs, ... }:
 
-let
-  cifs_automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
-in {
+{
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -42,7 +40,6 @@ in {
     aspellDicts.en
     beancount
     blktrace
-    cifs-utils
     cowsay
     chromium
     davfs2
