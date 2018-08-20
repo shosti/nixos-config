@@ -393,7 +393,7 @@ in {
   users.groups.media = {};
 
   krb5 = {
-    enable = false;
+    enable = true;
     domain_realm = {
       "emanuel.industries" = "EMANUEL.INDUSTRIES";
       ".emanuel.industries" = "EMANUEL.INDUSTRIES";
