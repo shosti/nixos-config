@@ -414,15 +414,13 @@ in {
 
 
   fileSystems."/mnt/share" = {
-    device = "//oldtown/shosti";
-    fsType = "cifs";
-    options = ["${cifs_automount_opts},credentials=/etc/nixos/smb-secrets,uid=shosti,gid=users"];
+    device = "oldtown.emanuel.industries:/storage/shares/shosti";
+    fsType = "nfs4";
   };
 
   fileSystems."/mnt/media" = {
-    device = "//oldtown/media";
-    fsType = "cifs";
-    options = ["${cifs_automount_opts},credentials=/etc/nixos/smb-secrets,uid=shosti,gid=media"];
+    device = "oldtown.emanuel.industries:/storage/shares/media";
+    fsType = "nfs4";
   };
 
   services.mpd = {
