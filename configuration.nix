@@ -393,11 +393,6 @@
   };
 
 
-  # systemd.automounts = [
-  #   { wants = ["zerotierone.service"]; where = "/mnt/share"; }
-  #   { wants = ["zerotierone.service"]; where = "/mnt/media"; }
-  # ];
-
   fileSystems."/mnt/share" = {
     device = "oldtown.emanuel.industries:/storage/shares/shosti";
     fsType = "nfs4";
