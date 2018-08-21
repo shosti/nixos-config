@@ -394,8 +394,8 @@
 
 
   systemd.automounts = [
-    { wants = "zerotierone.service"; where = "/mnt/share"; }
-    { wants = "zerotierone.service"; where = "/mnt/media"; }
+    { wants = ["zerotierone.service"]; where = "/mnt/share"; }
+    { wants = ["zerotierone.service"]; where = "/mnt/media"; }
   ];
 
   fileSystems."/mnt/share" = {
