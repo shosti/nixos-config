@@ -393,19 +393,21 @@
   };
 
 
-  systemd.automounts = [
-    { wants = ["zerotierone.service"]; where = "/mnt/share"; }
-    { wants = ["zerotierone.service"]; where = "/mnt/media"; }
-  ];
+  # systemd.automounts = [
+  #   { wants = ["zerotierone.service"]; where = "/mnt/share"; }
+  #   { wants = ["zerotierone.service"]; where = "/mnt/media"; }
+  # ];
 
   fileSystems."/mnt/share" = {
     device = "oldtown.emanuel.industries:/storage/shares/shosti";
     fsType = "nfs4";
+    options = "noauto,x-systemd.automount";
   };
 
   fileSystems."/mnt/media" = {
     device = "oldtown.emanuel.industries:/storage/shares/media";
     fsType = "nfs4";
+    options = "noauto,x-systemd.automount";
   };
 
   services.mpd = {
