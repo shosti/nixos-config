@@ -336,24 +336,7 @@
   networking.domain = "emanuel.industries";
 
   # Some ngnix stuff for work...
-  networking.extraHosts = ''
-    192.168.39.59 app.rainforest.test
-    192.168.39.59 admin.rainforest.test
-    192.168.39.59 portal.rainforest.test
-    192.168.39.59 automation.rainforest.test
-    192.168.39.59 schrute.rainforest.test
-
-    # 127.0.0.1 app.rainforest.test
-    # 127.0.0.1 admin.rainforest.test
-    # 127.0.0.1 portal.rainforest.test
-    # 127.0.0.1 automation.rainforest.test
-
-    # Zerotier machines
-    172.23.129.187 oldtown.emanuel.industries
-    172.23.233.97 drogo.emanuel.industries
-    172.23.129.187 oldtown
-    172.23.233.97 drogo
-  '' + builtins.readFile ./facebook-hosts;
+  networking.extraHosts = builtins.readFile ./facebook-hosts + builtins.readFile ./extra-hosts;
 
   services.nginx.virtualHosts = {
     "app.rainforest.test" = {
