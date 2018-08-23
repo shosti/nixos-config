@@ -415,7 +415,7 @@
   services.mpd = {
     enable = true;
     musicDirectory = "/mnt/media/Media/Music";
-    group = "media";
+    user = "shosti";
   };
 
   services.nginx.recommendedProxySettings = true;
