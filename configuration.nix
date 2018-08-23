@@ -416,6 +416,7 @@
     enable = true;
     musicDirectory = "/mnt/media/Media/Music";
     user = "shosti";
+    group = "media";
   };
 
   services.nginx.recommendedProxySettings = true;
