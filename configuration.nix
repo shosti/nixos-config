@@ -57,7 +57,6 @@
     gnome3.gtk # add explicitly so that things get linked
     gnupg
     hdparm
-    heimdalFull
     hfsprogs
     htop
     hwloc
@@ -375,25 +374,21 @@
 
   # Can't enable the krb5 module because we *don't* want pam_krb5 (everything it
   # seems to hang indeterminately if the kdc is down)
-  environment.etc."krb5.conf".text = ''
-    [libdefaults]
-      default_realm = EMANUEL.INDUSTRIES
-
-    [realms]
-      EMANUEL.INDUSTRIES = {
-        kdc = kdc.emanuel.industries
-      }
-
-    [domain_realm]
-      .emanuel.industries = EMANUEL.INDUSTRIES
-      emanuel.industries = EMANUEL.INDUSTRIES
-
-    [capaths]
-
-    [appdefaults]
-
-    [plugins]
-  '';
+  krb5 = {
+    enable = true;
+    realms = {
+      "EMANUEL.INDUSTRIES" = {
+        kdc = "kdc.emanuel.industries";
+        admin_server = "kdc.emanuel.industries";
+      };
+    };
+    libdefaults.default_realm = "EMANUEL.INDUSTRIES";
+    kerberos = pkgs.heimdalFull;
+    domain_realm = {
+      "emanuel.industries" = "EMANUEL.INDUSTRIES";
+      ".emanuel.industries" = "EMANUEL.INDUSTRIES";
+    };
+  };
 
   environment.etc."krb5.keytab" = {
     source = "/etc/nixos/krb5.keytab";
