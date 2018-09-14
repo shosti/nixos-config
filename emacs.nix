@@ -108,6 +108,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   key-chord
   less-css-mode
   logito
+  lua-mode
   macrostep
   magit
   markdown-mode
