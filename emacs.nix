@@ -53,7 +53,6 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   erlang
   ess
   evil
-  evil-magit
   evil-matchit
   evil-nerd-commenter
   evil-surround
@@ -123,6 +122,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   bbdb
   crystal-mode
   emms
+  evil-magit
   evil-paredit
   findr
   nix-mode
