@@ -6,6 +6,7 @@ mkdir -p /tmp/nixtest
 cp -R pkgs /tmp/nixtest
 cp ./*.nix /tmp/nixtest
 cp ./facebook-hosts /tmp/nixtest
+touch /tmp/nixtest/extra-hosts
 
 TMPCONFIG=/tmp/nixtest/configuration.nix
 export NIXOS_CONFIG="$TMPCONFIG"
