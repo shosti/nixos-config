@@ -112,7 +112,6 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   macrostep
   magit
   markdown-mode
-  mmm-mode
   mustache-mode
   nginx-mode
   paredit
