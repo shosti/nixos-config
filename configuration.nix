@@ -146,6 +146,7 @@
   services.xserver = {
     enable = true;
     windowManager.i3.enable = true;
+    displayManager.slim.enable = true;
 
     libinput = {
       enable = true;
