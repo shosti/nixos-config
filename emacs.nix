@@ -96,8 +96,6 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   paredit
   password-store
   prodigy
-  projectile
-  projectile-rails
   ruby-compilation
   ruby-end
   ruby-tools
@@ -126,6 +124,8 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   findr
   gh
   nix-mode
+  projectile
+  projectile-rails
   puppet-mode
   ox-reveal
   slack
