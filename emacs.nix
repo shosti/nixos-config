@@ -63,7 +63,6 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   flycheck
   flycheck-package
   fringe-helper
-  gh
   ghc
   gist
   git-commit
@@ -125,6 +124,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   evil-magit
   evil-paredit
   findr
+  gh
   nix-mode
   puppet-mode
   ox-reveal
