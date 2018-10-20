@@ -391,6 +391,8 @@
     };
   };
 
+  services.ssd.enable = true;
+
   environment.etc."krb5.keytab" = {
     source = "/etc/nixos/krb5.keytab";
   };
