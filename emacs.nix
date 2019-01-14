@@ -118,6 +118,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   bash-completion
   bbdb
   crystal-mode
+  ein
   emms
   evil-magit
   evil-paredit
