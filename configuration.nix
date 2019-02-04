@@ -408,11 +408,16 @@
     options = [ "noauto" "x-systemd.automount" ];
   };
 
+  users.users.mpd = {
+    isNormalUser = false;
+    extraGroups = ["media"];
+  };
+
   services.mpd = {
     enable = true;
     musicDirectory = "/mnt/media/Media/Music";
-    user = "shosti";
-    group = "users";
+    user = "mpd";
+    group = "media";
   };
 
   services.nginx.recommendedProxySettings = true;
