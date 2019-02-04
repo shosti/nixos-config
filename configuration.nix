@@ -181,7 +181,7 @@
     emulateWheel = true;
   };
 
-  users.groups = { u2f = {}; usb = {}; davfs2 = {}; };
+  users.groups = { u2f = { gid = 491; }; usb = {}; davfs2 = {}; };
   users.users.davfs2 = {
     isSystemUser = true;
     group = "davfs2";
@@ -371,7 +371,9 @@
     };
   };
 
-  users.groups.media = {};
+  users.groups.media = {
+    gid = 499;
+  };
 
   # Can't enable the krb5 module because we *don't* want pam_krb5 (everything it
   # seems to hang indeterminately if the kdc is down)
