@@ -52,7 +52,7 @@
     feh
     ffmpeg
     ghostscript
-    git
+    gitFull
     gnome2.gtk
     gnome3.gtk # add explicitly so that things get linked
     gnupg
