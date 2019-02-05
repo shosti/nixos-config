@@ -407,7 +407,7 @@
   fileSystems."/mnt/media" = {
     device = "oldtown.emanuel.industries:/storage/shares/media";
     fsType = "nfs4";
-    options = [ "noauto" "x-systemd.automount" "sec=sys" ];
+    options = [ "sec=sys" "noauto" "x-systemd.automount" ];
   };
 
   users.users.mpd = {
