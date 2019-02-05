@@ -332,7 +332,15 @@
   '';
 
   services.zerotierone.enable = true;
-  networking.firewall.allowedUDPPorts = [ 9993 ]; # zerotier likes that port
+  networking.firewall.allowedUDPPorts = [ 9993 ];
+  networking.firewall.interfaces = {
+    default = {
+      allowedUDPPorts = [ 9993 ]; # zerotier likes that port
+    };
+    zt0 = {
+      allowedTCPPorts = [ 6600 ];
+    };
+  };
   networking.firewall.trustedInterfaces = [ "virbr0" "virbr2" ]; # for kvm
   networking.domain = "emanuel.industries";
 
@@ -420,6 +428,7 @@
     musicDirectory = "/mnt/media/Media/Music";
     user = "mpd";
     group = "media";
+    network.listenAddress = "any";
   };
 
   services.nginx.recommendedProxySettings = true;
