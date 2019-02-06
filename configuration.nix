@@ -419,7 +419,7 @@
   };
 
   containers.mpd = {
-    autostart = true;
+    autoStart = true;
     bindMoungs."/music" = {
       hostPath = "/mnt/media/Media/Music";
       isReadOnly = true;
