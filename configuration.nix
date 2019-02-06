@@ -418,17 +418,32 @@
     options = [ "sec=sys" "noauto" "x-systemd.automount" ];
   };
 
-  users.users.mpd = {
-    isNormalUser = false;
-    extraGroups = ["media"];
-  };
+  containers.mpd = {
+    autostart = true;
+    bindMoungs."/music" = {
+      hostPath = "/mnt/media/Media/Music";
+      isReadOnly = true;
+    };
 
-  services.mpd = {
-    enable = true;
-    musicDirectory = "/mnt/media/Media/Music";
-    user = "mpd";
-    group = "media";
-    network.listenAddress = "any";
+    config = { config, pkgs, ... }: {
+      users.groups.media = {
+        gid = 499;
+      };
+
+      users.users.mpd = {
+        isNormalUser = false;
+        extraGroups = ["media"];
+      };
+
+      services.mpd = {
+        enable = true;
+        musicDirectory = "/music";
+
+        user = "mpd";
+        group = "media";
+        network.listenAddress = "any";
+      };
+    };
   };
 
   services.nginx.recommendedProxySettings = true;
