@@ -424,14 +424,19 @@
       hostPath = "/mnt/media/Media/Music";
       isReadOnly = true;
     };
+    bindMounts."/dev/snd" = {
+      hostPath = "/dev/snd";
+      isReadOnly = false;
+    };
     allowedDevices = [
-      { modifier = "rw"; node = "/dev/snd"; }
+      { modifier = "rw"; node = "char-alsa"; }
     ];
 
     config = { config, pkgs, ... }: {
       users.groups.media = {
         gid = 499;
       };
+      sound.enable = true;
 
       users.users.mpd = {
         isNormalUser = false;
