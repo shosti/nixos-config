@@ -420,7 +420,7 @@
 
   containers.mpd = {
     autoStart = true;
-    bindMoungs."/music" = {
+    bindMounts."/music" = {
       hostPath = "/mnt/media/Media/Music";
       isReadOnly = true;
     };
