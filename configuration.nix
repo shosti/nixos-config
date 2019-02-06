@@ -424,6 +424,9 @@
       hostPath = "/mnt/media/Media/Music";
       isReadOnly = true;
     };
+    allowedDevices = [
+      { modifier = "rw"; node = "/dev/snd"; }
+    ];
 
     config = { config, pkgs, ... }: {
       users.groups.media = {
