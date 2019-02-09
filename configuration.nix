@@ -51,6 +51,7 @@
     exfat
     feh
     ffmpeg
+    file
     ghostscript
     gitFull
     gnome2.gtk
