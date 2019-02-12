@@ -124,6 +124,8 @@
       DefaultSearchProviderName = "DuckDuckGo";
       PasswordManagerEnabled = false;
       BrowserSignin = 0;
+      AudioCaptureAllowed = false;
+      RestoreOnStartup = 5;
     };
   };
 
