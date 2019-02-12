@@ -56,6 +56,7 @@
     iotop
     isync
     jq
+    ldns # for drill
     libu2f-host
     lsof
     maim
