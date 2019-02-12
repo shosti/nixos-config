@@ -111,7 +111,6 @@
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       fira-code
-      font-droid
       (import ./pkgs/droid-slashed.nix)
       noto-fonts
       noto-fonts-emoji
