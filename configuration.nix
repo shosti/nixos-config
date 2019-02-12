@@ -38,6 +38,7 @@
     alsaUtils
     aspell
     aspellDicts.en
+    chromium
     cowsay
     direnv
     dmenu
