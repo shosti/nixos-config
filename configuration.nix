@@ -39,7 +39,6 @@
     aspell
     aspellDicts.en
     cowsay
-    chromium
     direnv
     dmenu
     docker-gc
@@ -106,6 +105,21 @@
   programs.wireshark.package = pkgs.wireshark;
   programs.bcc.enable = true;
   programs.command-not-found.enable = true;
+
+  # Chromium stuff
+  programs.browserpass.enable = true;
+  programs.chromium = {
+    enable = true;
+    defaultSearchProviderSearchURL = "https://duckduckgo.com/?q=%s";
+    defaultSearchProviderSuggestURL = "https://duckduckgo.com/?q=%s&kac=1";
+    extensions = [
+      "naepdomgkenhinolocfifgehidddafch" # browserpass-ce
+      "dbepggeogbaibhgnhhndojpepiihcmeb" # vimium
+      "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # privacy badger
+      "gcbommkclmclpchllfjekcdonpmejbdp" # https everywhere
+      "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
+    ];
+  };
 
   fonts = {
     enableFontDir = true;
