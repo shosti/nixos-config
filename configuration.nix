@@ -38,40 +38,27 @@
     alsaUtils
     aspell
     aspellDicts.en
-    beancount
-    blktrace
     cowsay
     chromium
-    davfs2
     direnv
     dmenu
     docker-gc
-    espeak
     ethtool
     exfat
     feh
     ffmpeg
     file
-    ghostscript
     gitFull
     gnome2.gtk
     gnome3.gtk # add explicitly so that things get linked
     gnupg
-    hdparm
-    hfsprogs
     htop
-    hwloc
-    imagemagick7
     iotop
     isync
     jq
-    ldns
     libu2f-host
-    lshw
     lsof
     maim
-    mpc_cli
-    mpd
     msmtp
     nethogs
     openssl
@@ -90,7 +77,6 @@
     silver-searcher
     sl
     slop
-    stow
     sysstat
     telnet
     termite
