@@ -258,11 +258,6 @@
     flags = "-k -p --utc";
   };
 
-  services.zfs.autoScrub = {
-    enable = true;
-    interval = "daily";
-  };
-
   users.groups.dovecot = {};
 
   services.dovecot2 = {
