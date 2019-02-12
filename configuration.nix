@@ -138,8 +138,6 @@
     };
   };
 
-  programs.sway.enable = true;
-
   services.tlp = {
     enable = true;
     extraConfig = ''
