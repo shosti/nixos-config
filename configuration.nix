@@ -111,8 +111,7 @@
   programs.browserpass.enable = true;
   programs.chromium = {
     enable = true;
-    defaultSearchProviderSearchURL = "https://duckduckgo.com/?q=%s";
-    defaultSearchProviderSuggestURL = "https://duckduckgo.com/?q=%s&kac=1";
+    defaultSearchProviderSearchURL = "https://duckduckgo.com/?q={searchTerms}";
     extensions = [
       "naepdomgkenhinolocfifgehidddafch" # browserpass-ce
       "dbepggeogbaibhgnhhndojpepiihcmeb" # vimium
@@ -120,6 +119,12 @@
       "gcbommkclmclpchllfjekcdonpmejbdp" # https everywhere
       "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
     ];
+    extraOpts = {
+      DefaultSearchProviderEnabled = true;
+      DefaultSearchProviderName = "DuckDuckGo";
+      PasswordManagerEnabled = false;
+      BrowserSignin = 0;
+    };
   };
 
   fonts = {
