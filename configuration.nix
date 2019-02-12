@@ -91,7 +91,6 @@
     sl
     slop
     stow
-    syncthing
     sysstat
     telnet
     termite
@@ -212,12 +211,6 @@
   virtualisation.docker = {
     enable = true;
     storageDriver = "zfs";
-  };
-
-  services.syncthing = {
-    user = "shosti";
-    enable = true;
-    dataDir = "/home/shosti/.syncthing";
   };
 
   containers.postgres = {
