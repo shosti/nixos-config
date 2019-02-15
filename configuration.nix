@@ -126,6 +126,7 @@
       BrowserSignin = 0;
       AudioCaptureAllowed = false;
       RestoreOnStartup = 5;
+      NetworkPredictionOptions = 2;
     };
   };
 
