@@ -129,6 +129,7 @@
       NetworkPredictionOptions = 2;
       SafeBrowsingEnabled = true;
       SafeBrowsingExtendedReportingEnabled = false;
+      SearchSuggestEnabled = false;
     };
   };
 
