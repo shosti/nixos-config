@@ -127,6 +127,8 @@
       AudioCaptureAllowed = false;
       RestoreOnStartup = 5;
       NetworkPredictionOptions = 2;
+      SafeBrowsingEnabled = true;
+      SafeBrowsingExtendedReportingEnabled = false;
     };
   };
 
