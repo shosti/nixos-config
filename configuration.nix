@@ -459,6 +459,49 @@
   services.nginx.recommendedProxySettings = true;
   services.nginx.enable = true;
 
+  security.pki.certificates = [
+    ''
+      Emanuel Industries Internal CA
+      -----BEGIN CERTIFICATE-----
+      MIIGMDCCBBigAwIBAgIJAOF8mCLrtttcMA0GCSqGSIb3DQEBCwUAMIGkMQswCQYD
+      VQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNU2FuIEZyYW5j
+      aXNjbzEbMBkGA1UECgwSRW1hbnVlbCBJbmR1c3RyaWVzMSMwIQYDVQQDDBpFbWFu
+      dWVsIEluZHVzdHJpZXMgUm9vdCBDQTEmMCQGCSqGSIb3DQEJARYXcm9vdEBlbWFu
+      dWVsLmluZHVzdHJpZXMwHhcNMTgwMjExMjM1MDEwWhcNMzgwMjA2MjM1MDEwWjCB
+      pDELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDVNh
+      biBGcmFuY2lzY28xGzAZBgNVBAoMEkVtYW51ZWwgSW5kdXN0cmllczEjMCEGA1UE
+      AwwaRW1hbnVlbCBJbmR1c3RyaWVzIFJvb3QgQ0ExJjAkBgkqhkiG9w0BCQEWF3Jv
+      b3RAZW1hbnVlbC5pbmR1c3RyaWVzMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIIC
+      CgKCAgEAzv6RKCkqKW2cCiwZ0OdKHd+rtiXk++MYKPHro42i+iE+tKa5hKkV8ZY5
+      PT+om17dQ/lMB2nbd3PYl1iW09x0m9ew1o8kjHUaWcR1I+20XLA01bS0LL03cGCz
+      HbywcPdKkFKSHZS8OxAheOTTWwR0TzwCivmDFhPqQ8O1CSjyEcHTC/9TfwNx1AeE
+      Ag7R6q/gHS0NZHPgW2aQXFH+HV4YpyD8rTepszNnU1AGrDsjgmbp9xQuHJRv2OWj
+      s0amAhl62RF3gR6DCM4w6dTFP4wS+sOlz4g8EMMLkfKj6FmJ+BIRTBrx9jwnDXCX
+      Emmoi6mHYSrdfSQWk9S8YFPldzBI7nEI4FR1cAdGC5dkqCjSL8R98BXj6m4LOvU8
+      OrFGIznxdfq8chtj9hkponYp4/64+qrSA7u9F3/yEnsmImwtzH6rK+6sGtC9EzbP
+      4dA1XrlPs2t2djYjmUDVtYVJtG0wCyZeW41OQhPppas8Pkzo9VSxXt9f9MYi5iBu
+      IodYP/01I+dTxnukCOjyWVHp+XDO5zGi0NYbA8xamsb0Hv/LeCnwioj4ItzHS7yh
+      T4/iebSoY1AjzPOj6HPQTC63vHqx2HNYbmOuC0L4xnAmTZ8KC4dmqhVo05IUXxwS
+      Qg35eNulRhKeVtERZRkVVXVGbmC1dhCe3aLUbjoyTM1HHYwE12UCAwEAAaNjMGEw
+      HQYDVR0OBBYEFI31S1c/ltBggsws2msyeW2Uv4ltMB8GA1UdIwQYMBaAFI31S1c/
+      ltBggsws2msyeW2Uv4ltMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgGG
+      MA0GCSqGSIb3DQEBCwUAA4ICAQBzowymtxcI8XM1zFTKxNxFBdnuG+xSRW1UyMD6
+      KLzlB4q5VHiLFrblQh4lQp7qQ96TbQJKuikoM0fqKFNmOkFfkSsXVqdxVRDZNReW
+      08QJAMdYOsigFKN7my9roKgZqfTw8sbjBS7AgMdex+f1scVtZYw39YKiEXDjqGQU
+      mLqOtgdeCseItG5fhsKsE5iWVTmc2ItLUmkXAyGVYjQNQZHQssJBdNzmC8WunOZ4
+      tk8fepBjYnnvH7xUD+v6AuLbrUu2Gr9I0dEuk2B+RYZMpOT+r4cXP9dOaR0Knktb
+      onm/2IhDk3LUL1Wgx9HTn6z3HmSZ6XCeBFjb7Mf3C1gsZXW0M2lChF0EM4dYUHV1
+      ACozMbubFB4lFtIQZexAGF3vZfum8qxjTzY+ChPY2g6qQ8XRBwypS52I0qt8Sf0s
+      6iSU+PKeAPNIjpQsTr/IjEahfBt80tNtEwYLDVKSq+WhPox9ouQBlvW3WtUzGIxP
+      PBw+pNkSsKcQUsR/DWHOIvNGKcpBQCipcorh5OK1/iiUXxLG+lcGPmUFZw4Osbr+
+      3S4GUvBb3EGRixyp7HfKGm6/96HoSPxzhVWKwvuxvZv5LFlusldPkENx2dt2rqnV
+      ET3sOSkAKYakJ9y5Iv6GytnTdOxN+jpBBkXXU0UrUIY+jfCPZ9j3jjPHEzioNrCC
+      zUQiCA==
+      -----END CERTIFICATE-----
+    ''
+  ];
+
+
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "18.09";
 }
