@@ -334,13 +334,15 @@
   '';
 
   services.zerotierone.enable = true;
-  networking.firewall.allowedUDPPorts = [ 9993 ];
   networking.firewall.interfaces = {
     default = {
       allowedUDPPorts = [ 9993 ]; # zerotier likes that port
     };
-    zt0 = {
-      allowedTCPPorts = [ 6600 ];
+    ztyqbxhcwp = {
+      allowedTCPPorts = [
+        22 # ssh
+        6600 # mpd
+      ];
     };
   };
   networking.firewall.trustedInterfaces = [ "virbr0" "virbr2" ]; # for kvm
