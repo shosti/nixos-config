@@ -18,6 +18,10 @@
   boot.tmpOnTmpfs = true;
   boot.kernelPackages = pkgs.linuxPackages_4_19;
 
+  # Disable hibernate resume, since it doesn't work and slows down the boot
+  # process
+  boot.resumeDevice = "/dev/null";
+
   boot.zfs = {
     forceImportAll = false;
     forceImportRoot = false;
