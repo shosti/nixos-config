@@ -169,6 +169,10 @@
     };
   };
 
+  services.logind.extraConfig = ''
+    HandlePowerKey=suspend
+  '';
+
   services.tlp = {
     enable = true;
     extraConfig = ''
