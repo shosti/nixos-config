@@ -64,6 +64,7 @@
     libu2f-host
     lsof
     maim
+    mpc_cli
     msmtp
     nethogs
     openssl
