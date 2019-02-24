@@ -288,7 +288,7 @@
 
   services.printing = {
     enable = true;
-    drivers = [ pkgs.brgenml1cupswrapper ];
+    drivers = [ pkgs.brgenml1cupswrapper pkgs.cups-bjnp ];
   };
   services.cron.enable = true;
   services.openssh = {
