@@ -49,7 +49,6 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   edit-server
   elisp-slime-nav
   elixir-mode
-  emms
   emojify
   erlang
   ess
@@ -120,6 +119,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   bbdb
   crystal-mode
   ein
+  emms
   evil-magit
   evil-paredit
   findr
