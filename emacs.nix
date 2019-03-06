@@ -26,6 +26,24 @@ beancount = pkgs.stdenv.mkDerivation rec {
   '';
 };
 
+emms = pkgs.stdenv.mkDerivation rec {
+  name = "emms";
+  version = "6013464eb7295fcd749b3146f758fc9295fbe11a";
+  buildInputs = with pkgs; [ emacs texinfo ];
+  preBuild = ''
+    makeFlagsArray+=(PREFIX="$out")
+    makeFlagsArray+=(INSTALLINFO="${pkgs.texinfo}/bin/install-info --info-dir $out/info")
+  '';
+
+  preInstall = "mkdir -p $out/share/man/man1";
+  src = pkgs.fetchFromGitHub {
+    owner = "shosti";
+    repo = "emms";
+    rev = "${version}";
+    sha256 = "0g7a31yn9p0iqr2im0l9d8fch58ffk5m7g3kfnn377pbyfh4hr11";
+  };
+};
+
 emacsWithPackages = (pkgs.emacsPackagesNgGen myEmacs).emacsWithPackages;
 
 in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
@@ -119,7 +137,6 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   bbdb
   crystal-mode
   ein
-  emms
   evil-magit
   evil-paredit
   findr
@@ -145,4 +162,5 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   org-plus-contrib
 ]) ++ ([
   beancount
+  emms
 ]))
