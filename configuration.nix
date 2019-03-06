@@ -65,6 +65,7 @@
     lsof
     maim
     mpc_cli
+    mpd # hack: used by emacs for various things
     msmtp
     nethogs
     openssl
