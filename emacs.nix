@@ -141,6 +141,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   evil-paredit
   findr
   gh
+  mingus
   nix-mode
   projectile
   projectile-rails
