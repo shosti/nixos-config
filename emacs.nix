@@ -147,6 +147,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   projectile-rails
   puppet-mode
   ox-reveal
+  simple-mpc
   slack
   toml-mode
   wacspace
