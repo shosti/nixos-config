@@ -423,13 +423,13 @@
   fileSystems."/mnt/share" = {
     device = "oldtown.emanuel.industries:/storage/shares/shosti";
     fsType = "nfs4";
-    options = [ "noauto" "x-systemd.automount" ];
+    options = [ "noauto" "x-systemd.automount" "soft" ];
   };
 
   fileSystems."/mnt/media" = {
     device = "oldtown.emanuel.industries:/storage/shares/media";
     fsType = "nfs4";
-    options = [ "sec=sys" "noauto" "x-systemd.automount" ];
+    options = [ "sec=sys" "noauto" "x-systemd.automount" "soft" ];
   };
 
   containers.mpd = {
