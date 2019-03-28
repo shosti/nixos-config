@@ -210,6 +210,7 @@
   users.users.shosti = {
     isNormalUser = true;
     extraGroups = [
+      "cdrom"
       "davfs2"
       "dialout"
       "docker"
