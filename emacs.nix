@@ -119,6 +119,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   ruby-tools
   rust-mode
   s
+  scala-mode
   scss-mode
   smex
   terraform-mode
