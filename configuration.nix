@@ -235,7 +235,7 @@
   virtualisation.docker = {
     enable = true;
     storageDriver = "zfs";
-    autoPrune = true;
+    autoPrune.enable = true;
   };
 
   containers.postgres = {
