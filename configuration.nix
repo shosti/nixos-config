@@ -234,7 +234,8 @@
   environment.variables.LIBVIRT_DEFAULT_URI = "qemu:///system";
   virtualisation.docker = {
     enable = true;
-    storageDriver = "overlay2";
+    storageDriver = "zfs";
+    autoPrune = true;
   };
 
   containers.postgres = {
