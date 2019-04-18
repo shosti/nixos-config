@@ -477,7 +477,7 @@ let kernelPackages = pkgs.linuxPackages_5_0; in
   # https://unix.stackexchange.com/questions/39226/how-to-run-a-script-with-systemd-right-before-shutdown
   systemd.services."shutdown-prepare" = {
     wantedBy = [ "multi-user.target" ];
-    requires = [ "zerotierone.servics" ];
+    requires = [ "zerotierone.service" ];
     serviceConfig = {
       Type = "oneshot";
       RemainAfterExit = "true";
