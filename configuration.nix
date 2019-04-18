@@ -476,12 +476,12 @@ let kernelPackages = pkgs.linuxPackages_5_0; in
   # sometimes stopped before unmount and the unmount fails. Approach stolen from
   # https://unix.stackexchange.com/questions/39226/how-to-run-a-script-with-systemd-right-before-shutdown
   systemd.services."shutdown-prepare" = {
-    enable = true;
+    wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       Type = "oneshot";
       RemainAfterExit = "true";
-      ExecStart = "/bin/true";
-      ExecStop = "systemctl stop container@mpd.service mnt-share.mount mnt-media.mount";
+      ExecStart = "${pkgs.coreutils}/bin/true";
+      ExecStop = "${pkgs.systemd}/bin/systemctl stop container@mpd.service mnt-share.mount mnt-media.mount";
     };
   };
 
