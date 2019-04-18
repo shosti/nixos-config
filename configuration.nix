@@ -472,20 +472,6 @@ let kernelPackages = pkgs.linuxPackages_5_0; in
     };
   };
 
-  # Hacky way to unmount NFS mounts before shutdown. Otherwise, zerotier is
-  # sometimes stopped before unmount and the unmount fails. Approach stolen from
-  # https://unix.stackexchange.com/questions/39226/how-to-run-a-script-with-systemd-right-before-shutdown
-  systemd.services."shutdown-prepare" = {
-    wantedBy = [ "multi-user.target" ];
-    requires = [ "zerotierone.service" ];
-    serviceConfig = {
-      Type = "oneshot";
-      RemainAfterExit = "true";
-      ExecStart = "${pkgs.coreutils}/bin/true";
-      ExecStop = "${pkgs.systemd}/bin/systemctl stop container@mpd.service mnt-share.mount mnt-media.mount";
-    };
-  };
-
   services.nginx.recommendedProxySettings = true;
   services.nginx.enable = true;
 
