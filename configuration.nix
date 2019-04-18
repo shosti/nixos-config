@@ -515,6 +515,7 @@
   ];
 
 
+  nixpkgs.config.allowUnfree = true; # printer drivers and whatnot
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "19.03";
 }
