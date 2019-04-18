@@ -4,6 +4,7 @@
 
 { config, pkgs, ... }:
 
+let kernelPackages = pkgs.linuxPackages_4_19; in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -16,7 +17,8 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "zfs" "nfs4" ];
   boot.tmpOnTmpfs = true;
-  boot.kernelPackages = pkgs.linuxPackages_4_19;
+  boot.kernelPackages = kernelPackages;
+  boot.extraModulePackages = [ kernelPackages.wireguard ];
 
   # Disable hibernate resume, since it doesn't work and slows down the boot
   # process
@@ -97,6 +99,7 @@
     vlc
     wget
     whois
+    wireguard-tools
     wirelesstools
     xautolock
     xbindkeys
