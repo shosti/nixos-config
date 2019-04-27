@@ -8,14 +8,13 @@ cp ./*.nix /tmp/nixtest
 cp ./facebook-hosts /tmp/nixtest
 touch /tmp/nixtest/extra-hosts
 
-TMPCONFIG=/tmp/nixtest/configuration.nix
+TMPDIR=/tmp/nixtest
+TMPCONFIG="$TMPDIR/configuration.nix"
 export NIXOS_CONFIG="$TMPCONFIG"
 
-sed -e '/timesyncd/d' -e '/^}$/d' configuration.nix > "$TMPCONFIG"
-cat <<EOS >> "$TMPCONFIG"
-  users.users.$(whoami).openssh.authorizedKeys.keys = [ "$(cat ~/.ssh/id_rsa.pub)" ];
-}
-EOS
+sed -e '/timesyncd/d' configuration.nix > "$TMPCONFIG"
+echo '{}' > "$TMPDIR/hardware-configuration.nix"
+echo '{ networking.hostId = "aaaaaaaa"; }' > "$TMPDIR/machine-configuration.nix"
 
 nixos-rebuild build-vm
 echo "Connect with 'ssh -p 2222 localhost'"
