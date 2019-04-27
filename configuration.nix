@@ -11,8 +11,6 @@ let kernelPackages = pkgs.linuxPackages_5_0; in
       ./hardware-configuration.nix
       # Include machine-specific config
       ./machine-configuration.nix
-      # Include package overrides
-      ./pkgs/overrides.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
