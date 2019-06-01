@@ -198,6 +198,9 @@ let kernelPackages = pkgs.linuxPackages_5_0; in
     longitude = "-122.4856";
   };
 
+  services.kbfs.enable = true;
+  services.keybase.enable = true;
+
   hardware.bluetooth.enable = false;
   hardware.trackpoint = {
     enable = true;
