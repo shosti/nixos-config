@@ -62,6 +62,7 @@ let kernelPackages = pkgs.linuxPackages_5_0; in
     iotop
     isync
     jq
+    keybase-gui
     ldns # for drill
     libu2f-host
     lsof
