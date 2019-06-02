@@ -142,6 +142,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   evil-paredit
   findr
   gh
+  go-rename
   mingus
   nix-mode
   projectile
