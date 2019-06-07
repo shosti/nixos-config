@@ -151,7 +151,10 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   ox-reveal
   simple-mpc
   slack
+  tide
   toml-mode
+  ts-comint
+  typescript-mode
   wacspace
 ]) ++ (with epkgs.elpaPackages; [
   debbugs
