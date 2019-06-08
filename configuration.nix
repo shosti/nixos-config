@@ -364,7 +364,7 @@ let kernelPackages = pkgs.linuxPackages_5_0; in
       ];
     };
   };
-  networking.firewall.trustedInterfaces = [ "virbr0" "virbr2" ]; # for kvm
+  networking.firewall.trustedInterfaces = [ "virbr0" "virbr1" "virbr2" "virbr3" "virbr4" ]; # for kvm
   networking.domain = "emanuel.industries";
 
   # Some ngnix stuff for work...
