@@ -54,6 +54,7 @@ let kernelPackages = pkgs.linuxPackages_latest; in
     feh
     ffmpeg
     file
+    firefox
     gitFull
     gnome2.gtk
     gnome3.gtk # add explicitly so that things get linked
@@ -524,7 +525,7 @@ let kernelPackages = pkgs.linuxPackages_latest; in
 
   nixpkgs.config = {
     allowUnfree = true; # printer drivers and whatnot
-    chromium.icedtea = true;
+    firefox.icedtea = true;
   };
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "19.03";
