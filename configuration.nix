@@ -522,7 +522,10 @@ let kernelPackages = pkgs.linuxPackages_latest; in
   ];
 
 
-  nixpkgs.config.allowUnfree = true; # printer drivers and whatnot
+  nixpkgs.config = {
+    allowUnfree = true; # printer drivers and whatnot
+    chromium.icedtea = true;
+  };
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "19.03";
 }
