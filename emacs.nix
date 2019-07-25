@@ -73,6 +73,7 @@ in emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
   evil
   evil-matchit
   evil-nerd-commenter
+  evil-numbers
   evil-surround
   expand-region
   f
