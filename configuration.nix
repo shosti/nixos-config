@@ -4,7 +4,7 @@
 
 { config, pkgs, ... }:
 
-let kernelPackages = pkgs.linuxPackages_latest; in
+let kernelPackages = pkgs.linuxPackages_5_1; in
 {
   imports =
     [ # Include the results of the hardware scan.
