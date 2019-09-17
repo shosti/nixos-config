@@ -157,7 +157,7 @@ let kernelPackages = pkgs.linuxPackages_5_1; in
     ];
   };
 
-  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
   programs.bash.enableCompletion = true;
 
