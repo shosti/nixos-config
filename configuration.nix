@@ -4,7 +4,7 @@
 
 { config, pkgs, ... }:
 
-let kernelPackages = pkgs.linuxPackages_5_1; in
+let kernelPackages = pkgs.linuxPackages_latest; in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -196,8 +196,11 @@ let kernelPackages = pkgs.linuxPackages_5_1; in
   };
   services.redshift = {
     enable = true;
-    latitude = "37.7618";
-    longitude = "-122.4856";
+  };
+
+  location = {
+    latitude = 37.7618;
+    longitude = -122.4856;
   };
 
   services.kbfs.enable = true;
@@ -550,5 +553,5 @@ let kernelPackages = pkgs.linuxPackages_5_1; in
     allowUnfree = true; # printer drivers and whatnot
   };
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "19.03";
+  system.stateVersion = "19.10";
 }
