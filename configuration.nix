@@ -164,6 +164,7 @@ let kernelPackages = pkgs.linuxPackages_latest; in
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
+    enableExtraSocket = true;
   };
 
   services.xserver = {
