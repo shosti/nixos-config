@@ -310,6 +310,9 @@ let kernelPackages = pkgs.linuxPackages_latest; in
     enable = true;
     permitRootLogin = "no";
     passwordAuthentication = false;
+    extraConfig = ''
+      StreamLocalBindUnlink yes
+    '';
   };
 
   security.sudo.wheelNeedsPassword = false;
